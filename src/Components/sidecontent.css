@@ -1,0 +1,9 @@
+.side-content-section {
+  margin-left: clamp(30px, 3.78vw, 51px);
+}
+
+@media (max-width: 920px) {
+  .side-content-section {
+    margin-left: 0px;
+  }
+}
