@@ -1,13 +1,15 @@
 import React from 'react'
-import Trending from './Trending'
 import Carousel from './Carousel'
+import Category from './Category'
+import Social from './Social'
 import "./sidecontent.css"
 
 const Sidecontent = () => {
   return (
     <div className='side-content-section mt-[5px]'>
-        {/* <Trending/> */}
-        <Carousel/>
+        <Carousel/> {/******** need to work on scrolling error *************/}
+        <Category/>
+        <Social/>
     </div>
   )
 }

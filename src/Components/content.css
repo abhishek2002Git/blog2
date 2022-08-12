@@ -1,4 +1,10 @@
 
+/* .content-header{ */
+  /* width: 290px; */
+  /* width: max(290px, 42%); */
+/* } */
+
+
 @media (max-width: 920px) {
   .content-section {
     width: 90%;

@@ -1,0 +1,9 @@
+.trending-section {
+  width: min(24vw, 316px);
+}
+
+@media (max-width: 920px) {
+  .trending-section {
+    width: 85vw;
+  }
+}

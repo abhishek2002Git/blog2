@@ -9,14 +9,14 @@
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
+html {
+  scroll-behavior:smooth;
+}
+
 
 /* styling when sidebar gets open, this class is uded in navbar, footer and post componenets */
 .side-bar-open {
   opacity: 0.2;
 }
 
-/* body{
-  /* position: fixed; */
-  /* overflow: hidden; */
-/* } */
 
