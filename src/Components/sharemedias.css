@@ -1,0 +1,9 @@
+.share-whatsapp {
+  width: clamp(32px, 10vw, 140px);
+}
+
+@media (max-width: 590px) {
+  .share-count {
+    width: 25%;
+  }
+}
