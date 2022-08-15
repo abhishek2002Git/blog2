@@ -1,0 +1,14 @@
+.toc-header {
+  font-size: clamp(14.59px, 1.4vw, 20px);
+  font-weight: 600;
+  color: black;
+}
+
+.ul-title {
+  font-size: clamp(13.86px, 1.15vw, 15.2px);
+}
+
+.ul-item {
+  font-size: clamp(13.169px, 1.1vw, 15px);
+  margin-left: 20px;
+}

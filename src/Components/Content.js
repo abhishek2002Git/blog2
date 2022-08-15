@@ -2,11 +2,12 @@ import React from "react";
 import ContentHeader from "./ContentHeader";
 import ShareMedias from "./ShareMedias";
 import PostIntro from "./PostIntro";
+import TOC from "./TOC";
 import "./content.css";
 
 const Content = () => {
   return (
-    <div className="content-section bg-white h-[3500px] w-[57%] mt-[25px] flex flex-col items-center">
+    <div className="content-section bg-white w-[57%] mt-[25px] flex flex-col items-center">
       <ContentHeader />
 
       <div className="post-title">
@@ -30,6 +31,7 @@ const Content = () => {
       </div>
 
       <PostIntro/>
+      <TOC/>
     </div>
   );
 };
