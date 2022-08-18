@@ -3,6 +3,9 @@ import ContentHeader from "./ContentHeader";
 import ShareMedias from "./ShareMedias";
 import PostIntro from "./PostIntro";
 import TOC from "./TOC";
+import MainContent from "./MainContent";
+import Author from "./Author";
+import RelatedPosts from "./RelatedPosts";
 import "./content.css";
 
 const Content = () => {
@@ -32,6 +35,10 @@ const Content = () => {
 
       <PostIntro/>
       <TOC/>
+      <MainContent/>
+      <ShareMedias />
+      <Author/>
+      <RelatedPosts/>
     </div>
   );
 };

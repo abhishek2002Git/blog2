@@ -1,0 +1,35 @@
+.head-h2 {
+  font-size: clamp(23px, 2.27vw, 35px);
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.head-h3 {
+  font-size: clamp(18px, 1.8vw, 30px);
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+.text-p {
+  margin-top: 12px;
+}
+
+.list {
+  padding-left: 40px;
+  list-style-type: disc;
+  margin-top: 12px;
+}
+
+.image {
+  width: 100%;
+  margin-top: 12px;
+  text-align: center;
+}
+
+.caption {
+  font-size: 14px;
+  margin-top: 5px;
+  color: #2c2b2b;
+  text-align: center;
+  padding: 0px 20px;
+}
