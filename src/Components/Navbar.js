@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./navbar.css";
 import searchIcon from "./icons8-search.svg";
 import { AppState } from "../contexts/Context";
+import logo from "../images/logo.png"
 
 const Navbar = () => {
   const { showSidebar, scrollDir, sidebar } = AppState();
@@ -19,7 +20,8 @@ const Navbar = () => {
         <div className="logo">
           <img
             id="logoImg"
-            src="https://smlclone.netlify.app/images/shoutmeloud.png"
+            // src="https://smlclone.netlify.app/images/shoutmeloud.png"
+            src={logo}
             alt="image"
           />
         </div>

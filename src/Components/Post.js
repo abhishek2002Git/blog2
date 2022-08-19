@@ -29,7 +29,7 @@ const Post = () => {
         sidebar === true ? "post-section side-bar-open bg-[#EDEDED]" : "post-section bg-[#EDEDED] flex justify-center "
       }
       style={{
-        marginTop: scrollDir === "scrolling down" ? "0px" : "75px", width:'100vw'
+        marginTop: scrollDir === "scrolling down" ? "0px" : "60px", width:'100vw'
       }}
       onClick={() => {
         setSidebar(false);

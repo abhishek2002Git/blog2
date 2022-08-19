@@ -49,6 +49,21 @@ const AppProvider = ({ children }) => {
     return () => window.removeEventListener("scroll", onScroll);
   }, [scrollDir]);
 
+  // detect whether site is opened in mobile or laptop
+  const [deviceMobile, setDeviceMobile] = useState(false);
+  const mobileOrBrowser = () => {
+    if (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      )
+    ) {
+      setDeviceMobile(true);
+    }
+  };
+  useEffect(() => {
+    mobileOrBrowser();
+  }, []);
+
   return (
     <AppContext.Provider
       value={{
@@ -58,6 +73,7 @@ const AppProvider = ({ children }) => {
         closeSidebar,
         setSidebar,
         scrollDir,
+        deviceMobile,
       }}
     >
       {children}

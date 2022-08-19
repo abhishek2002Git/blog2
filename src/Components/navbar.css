@@ -17,18 +17,19 @@
 
 .logo {
   margin-left: 5.6vw;
-  margin-top: 15px;
+  margin-top: 12px;
 }
 
 #logoImg {
-  min-height: auto;
+  /* min-height: auto; */
+  width: 150px;
 }
 
 .nav-ul {
   display: flex;
 
   /* margin-right: 7vw; */
-  display: none; 
+  display: none;
 }
 
 .nav-li {
@@ -51,7 +52,7 @@
 }
 
 .menu-icon {
-  margin-right: 5.6vw;
+  margin-right: 23px;
   margin-top: 15px;
 }
 
@@ -113,5 +114,33 @@
   }
   .banner-right p {
     padding: 0px 0px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    height: 60px;
+    /* background: purple; */
+    background: #ffffff;
+  }
+
+  .container {
+    line-height: 60px;
+  }
+  .logo {
+    margin-left: 5.6vw;
+    margin-top: 11px;
+  }
+
+  #logoImg {
+    width: 110px;
+  }
+  .menu-icon {
+    margin-top: 13px;
+  }
+
+  .div-menu-icon {
+    width: 30px;
+    height: 4px;
   }
 }
