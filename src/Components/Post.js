@@ -2,34 +2,25 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { AppState } from "../contexts/Context";
+import { APIState } from "../contexts/Apis";
 import Content from "./Content";
 import Sidecontent from "./Sidecontent";
 import "./post.css";
 
 const Post = () => {
   const { setSidebar, scrollDir, sidebar } = AppState();
+  const {} = APIState();
   let { id } = useParams();
-  // const [blogID, setBlogID] = useState();
-  const [blogData, setBlogData] = useState();
-
-  const getBlog = async () => {
-    const api_url = `https://inotebookbackend.herokuapp.com/api/message/blog/${id}`;
-    const response = await fetch(api_url);
-    const data = await response.json();
-    setBlogData(data[0].content);
-  };
-
-  useEffect(() => {
-    getBlog();
-  }, []);
 
   return (
     <div
       className={
-        sidebar === true ? "post-section side-bar-open bg-[#EDEDED]" : "post-section bg-[#EDEDED] flex justify-center "
+        sidebar === true
+          ? "post-section side-bar-open bg-[#EDEDED]"
+          : "post-section bg-[#EDEDED] flex justify-center sm:pt-[15px]"
       }
       style={{
-        marginTop: scrollDir === "scrolling down" ? "0px" : "60px", width:'100vw'
+        marginTop: scrollDir === "scrolling down" ? "0px" : "60px",
       }}
       onClick={() => {
         setSidebar(false);
@@ -37,8 +28,8 @@ const Post = () => {
       // {/* closing sidebar on clicking */}
     >
       {/* <div dangerouslySetInnerHTML={{ __html: blogData }} /> */}
-      <Content/>
-      <Sidecontent/>
+      <Content />
+      <Sidecontent />
     </div>
   );
 };

@@ -7,14 +7,12 @@ import {
   FaMailBulk,
 } from "react-icons/fa";
 import { AppState } from "../contexts/Context";
+import { APIState } from "../contexts/Apis";
 import "./sharemedias.css";
 
 const ShareMedias = () => {
+  const { blogPostData } = APIState();
   const { deviceMobile } = AppState();
-  const [postTitle, setPostTitle] = useState("Current Post Title");
-  const [postLink, setPostLink] = useState(
-    "https://blog203.vercel.app/blog/62deb732081b5ed9aca9c0a9"
-  );
 
   return (
     <div className="share-section flex justify-between w-[88%] my-9">
@@ -23,7 +21,7 @@ const ShareMedias = () => {
           <FaShareAlt />
         </div>
         <div className="share-number flex flex-col items-center">
-          <span className="text-[15px] font-[600]">35</span>
+          <span className="text-[15px] font-[600]">{blogPostData.shares}</span>
           <span className="text-[12px] text-[#0000008C] ml-3">Shares</span>
         </div>
       </div>
@@ -32,7 +30,9 @@ const ShareMedias = () => {
         <a
           href={`https://${
             deviceMobile == true ? "api" : "web"
-          }.whatsapp.com/send?text=${postTitle}%0a${postLink}`}
+          }.whatsapp.com/send?text=${blogPostData.title}%0a${
+            "http://localhost:3000/blog/" + blogPostData.postid
+          }`}
           data-action="share/whatsapp/share"
           target="_blank"
           rel="noreferrer"
@@ -44,7 +44,9 @@ const ShareMedias = () => {
           </span>
         </a>
         <a
-          href={`https://twitter.com/intent/tweet?text=${postTitle}&url=${postLink}`}
+          href={`https://twitter.com/intent/tweet?text=${
+            blogPostData.title
+          }&url=${"http://localhost:3000/blog/" + blogPostData.postid}`}
           data-action="share/whatsapp/share"
           target="_blank"
           rel="noreferrer"
@@ -56,7 +58,7 @@ const ShareMedias = () => {
           </span>
         </a>
         <a
-          href={`https://www.facebook.com/sharer/sharer.php?u=${postLink}`}
+          href={`https://www.facebook.com/sharer/sharer.php?u=${"http://localhost:3000/blog/"+blogPostData.postid}`}
           data-action="share/whatsapp/share"
           target="_blank"
           rel="noreferrer"
@@ -68,7 +70,7 @@ const ShareMedias = () => {
           </span>
         </a>
         <a
-          href={`https://mail.google.com/mail/u/0/?fs=1&tf=cm&to&su=${postTitle}&body=%27+${postLink}+%27&ui=2`}
+          href={`https://mail.google.com/mail/u/0/?fs=1&tf=cm&to&su=${blogPostData.title}&body=%27+${"http://localhost:3000/blog/"+blogPostData.postid}+%27&ui=2`}
           data-action="share/whatsapp/share"
           target="_blank"
           rel="noreferrer"
