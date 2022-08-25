@@ -34,17 +34,33 @@ const Footer = () => {
         <div className="socials">
           <h2 className="social-text">Follow Me</h2>
           <div className="social-boxes">
-            <div className="social-box">
+            <div
+              onClick={() => {
+                window.location = "https://twitter.com/abhiShukla202";
+              }}
+              className="social-box"
+            >
               <div className="social-icon">
                 <FaTwitter />
               </div>
             </div>
-            <div className="social-box center-icon">
+            <div
+              onClick={() => {
+                window.location =
+                  "https://www.instagram.com/theabhishekshukla2002/";
+              }}
+              className="social-box center-icon"
+            >
               <div className="social-icon">
                 <FaInstagram />
               </div>
             </div>
-            <div className="social-box">
+            <div
+              onClick={() => {
+                window.location = "https://www.linkedin.com/in/abhi203";
+              }}
+              className="social-box"
+            >
               <div className="social-icon">
                 <FaLinkedinIn />
               </div>

@@ -6,15 +6,13 @@ import TOC from "./TOC";
 import MainContent from "./MainContent";
 import Author from "./Author";
 import RelatedPosts from "./RelatedPosts";
+import Loader from "./Loader";
 import { APIState } from "../contexts/Apis";
 import "./content.css";
 
 const Content = () => {
-  const { getBlog, blogPostData } = APIState();
-  useEffect(() => {
-    getBlog();
-  }, []);
-  console.log(blogPostData);
+  const {blogPostData } = APIState();
+
   return (
     <div className="content-section bg-white w-[57%] mt-[25px] flex flex-col items-center">
       <ContentHeader />

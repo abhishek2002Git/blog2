@@ -5,12 +5,17 @@ import { AppState } from "../contexts/Context";
 import { APIState } from "../contexts/Apis";
 import Content from "./Content";
 import Sidecontent from "./Sidecontent";
+import Loader from "./Loader";
 import "./post.css";
 
 const Post = () => {
   const { setSidebar, scrollDir, sidebar } = AppState();
-  const {} = APIState();
   let { id } = useParams();
+  const { getBlog, blogPostData } = APIState();
+  useEffect(() => {
+    getBlog();
+  }, []);
+  console.log(blogPostData.title);
 
   return (
     <div
@@ -27,8 +32,7 @@ const Post = () => {
       }}
       // {/* closing sidebar on clicking */}
     >
-      {/* <div dangerouslySetInnerHTML={{ __html: blogData }} /> */}
-      <Content />
+      {blogPostData.title==undefined?<Loader/>:<Content />}
       <Sidecontent />
     </div>
   );
