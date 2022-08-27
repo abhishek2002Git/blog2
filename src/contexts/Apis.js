@@ -3,10 +3,12 @@ import React, { createContext, useContext, useState, useEffect } from "react";
 const APIContext = createContext();
 
 const APIProvider = ({ children }) => {
+  // fetching blog post data
   const [blogPostData, setBlogPostData] = useState([]);
-  const getBlog = async () => {
+  const getBlog = async (pid) => {
+    setBlogPostData([]); // to show loader
     const host = "https://inotebookbackend.herokuapp.com";
-    const api_url = `${host}/api/blogs/blog/beauty-full`;
+    const api_url = `${host}/api/blogs/blog/${pid}`;
     const response = await fetch(api_url);
     const data = await response.json();
     setBlogPostData(data);

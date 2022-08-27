@@ -8,6 +8,7 @@ import Author from "./Author";
 import RelatedPosts from "./RelatedPosts";
 import Loader from "./Loader";
 import { APIState } from "../contexts/Apis";
+import { Link } from "react-router-dom";
 import "./content.css";
 
 const Content = () => {
@@ -15,7 +16,10 @@ const Content = () => {
 
   return (
     <div className="content-section bg-white w-[57%] mt-[25px] flex flex-col items-center">
-      <ContentHeader />
+      <div>
+      <Link to="/blog/beauty-full"><ContentHeader /></Link>
+      
+      </div>
 
       <div className="post-title">
         <h1 className="post-title-text text-[30px] text-center font-[600] px-3 my-4">

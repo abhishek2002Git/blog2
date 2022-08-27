@@ -13,9 +13,9 @@ const Post = () => {
   let { id } = useParams();
   const { getBlog, blogPostData } = APIState();
   useEffect(() => {
-    getBlog();
-  }, []);
-  console.log(blogPostData.title);
+    getBlog(id);
+  }, [id]);
+  console.log(blogPostData);
 
   return (
     <div
