@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { AppState } from "../contexts/Context";
 import "./footer.css";
+import { APIState } from "../contexts/Apis";
+import { useNavigate } from "react-router-dom";
 import { FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
   const { setSidebar, sidebar } = AppState();
+  const { sendOtpMail } = APIState();
+  const [subsEmailAddress, setSubsEmailAddress] = useState("");
+  const changeSubsEmailAdd = (e) => {
+    setSubsEmailAddress(e.target.value);
+  };
+  let navigate = useNavigate();
+
   return (
     <div
       className={sidebar === true ? "side-bar-open" : ""}
@@ -26,8 +35,19 @@ const Footer = () => {
               className="subscribe-input"
               type="text"
               placeholder="     Enter email address"
+              value={subsEmailAddress}
+              name="subsEmailAddress"
+              onChange={changeSubsEmailAdd}
             />
-            <input className="subscribe-btn" type="button" value="Subscribe" />
+            <input
+              className="subscribe-btn"
+              onClick={() => {
+                sendOtpMail(subsEmailAddress);
+                navigate("/verify");
+              }}
+              type="button"
+              value="Subscribe"
+            />
           </div>
         </div>
 

@@ -7,18 +7,19 @@ import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import Sidebar2 from "./Components/Sidebar2";
 import Carousel from "./Components/Carousel";
+import Verify from "./Components/Verify";
 import { AppState } from "./contexts/Context";
 import "./App.css";
 
 function App() {
-  const { sidebar} = AppState();
+  const { sidebar } = AppState();
 
   // styling when sidebar gets open
   document.body.style.backgroundColor = sidebar == true ? "black" : "";
   document.body.style.overflow = sidebar == true ? "hidden" : "";
 
   return (
-    <div  className={sidebar === true ? "" : ""}>
+    <div className={sidebar === true ? "" : ""}>
       <Router>
         <Navbar />
         <Sidebar2 />
@@ -26,6 +27,7 @@ function App() {
           <Route exact path="/blog" element={<Home />} />
           <Route exact path="/blogs" element={<Blog />} />
           <Route exact path="/blog/:id" element={<Post />} />
+          <Route exact path="/verify" element={<Verify />} />
           <Route exact path="/carousel" element={<Carousel />} />
         </Routes>
         <Footer />
