@@ -44,6 +44,7 @@ const Footer = () => {
               onClick={() => {
                 sendOtpMail(subsEmailAddress);
                 navigate("/verify");
+                window.scrollTo(0, 0);
               }}
               type="button"
               value="Subscribe"
