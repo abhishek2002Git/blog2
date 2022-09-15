@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { AppState } from "../contexts/Context";
 import { APIState } from "../contexts/Apis";
+import Loader from "./Loader";
+import otpSymbol from "../images/sendotp.png";
+import verifySucessful from "../images/emailVerificationSuccess.png";
 
 const Verify = () => {
-  const { scrollDir } = AppState();
+  const { scrollDir, deviceMobile } = AppState();
   const { otpToVerify } = APIState();
 
   // otp related
@@ -20,12 +23,19 @@ const Verify = () => {
     }
   };
 
+  const [dispWhichComp, setDispWhichComp] = useState("verify");
+  // above state describes which component to display out of verify otp, loader, success message
+
   const verifyOtp = () => {
     let EnteredOtp = otp.join("");
     if (EnteredOtp == otpToVerify) {
-      console.log("verified successfully");
+      window.scrollTo(0, 0);
+      setDispWhichComp("loader");
+      setTimeout(() => {
+        setDispWhichComp("success");
+      }, 2000);
     } else {
-      console.log("invalid otp");
+      alert("Invalid OTP");
     }
   };
 
@@ -33,53 +43,78 @@ const Verify = () => {
     <div
       className="h-[100vh]"
       style={{
-        marginTop: scrollDir === "scrolling down" ? "0px" : "75px",
+        marginTop: scrollDir === "scrolling down" ? "0px" : "100px",
       }}
     >
-      <div className="h-screen bg-[#EDEDED] py-20 px-3">
-        <div className="container mx-auto">
-          <div className="max-w-sm mx-auto md:max-w-lg">
-            <div className="w-full">
-              <div className="bg-white w-[50vw] py-3 rounded text-center">
-                <h1 className="text-2xl font-bold">OTP Verification</h1>
-                <div className="flex flex-col mt-4">
-                  <span>Enter the OTP you received at</span>
-                  <span className="font-bold">+91 ******876</span>
-                </div>
-
-                <div
-                  id="otp"
-                  className="flex flex-row justify-center text-center px-2 mt-5"
-                >
-                  {otp.map((data, index) => {
-                    return (
-                      <input
-                        className="m-2 border h-10 w-10 text-center form-control rounded"
-                        type="text"
-                        name="otp"
-                        maxLength="1"
-                        key={index}
-                        value={data}
-                        onChange={(e) => handleChange(e.target, index)}
-                        onFocus={(e) => e.target.select()}
-                      />
-                    );
-                  })}
-                </div>
-
-                <div
-                  onClick={verifyOtp}
-                  className="flex justify-center text-center mt-5"
-                >
-                  <a className="flex items-center text-blue-700 hover:text-blue-900 cursor-pointer">
-                    <span className="font-bold">Verify</span>
-                    <i className="bx bx-caret-right ml-1"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+      {/* verify otp component */}
+      <div
+        style={{ display: dispWhichComp === "verify" ? "flex" : "none" }}
+        className="flex flex-col items-center text-center"
+      >
+        <h2 className="text-[35px] tracking-[0.01em]">verification</h2>
+        <img className="w-[140px] mt-8 ml-6" src={otpSymbol} alt="" />
+        <p className="text-[23px] tracking-[0.01em] mt-5 px-3">
+          Enter the verification code we just sent you on your email address.
+        </p>
+        <div
+          id="otp"
+          className="flex flex-row justify-center text-center px-2 mt-5"
+        >
+          {otp.map((data, index) => {
+            return (
+              <input
+                className="m-2 h-[40px] w-[40px] text-center form-control border-b-4 border-b-[#E53935] text-[30px] outline-[#ffffff] focus:border-b-[12px] bg-transparent"
+                type={deviceMobile ? "number" : "text"}
+                name="otp"
+                maxLength="1"
+                key={index}
+                value={data}
+                onChange={(e) => handleChange(e.target, index)}
+                onFocus={(e) => e.target.select()}
+              />
+            );
+          })}
         </div>
+
+        <div className="flex mt-5">
+          <p className="text-[#7c7b7b]">If you didn't recieve a code!</p>
+          <p className="text-[#E53935] font-[600] ml-1">Resend</p>
+        </div>
+
+        <button
+          onClick={verifyOtp}
+          className="text-white bg-[#E53935] mt-5 px-7 py-1 rounded-[15px]"
+        >
+          Verify
+        </button>
+      </div>
+
+      {/* verifying loader component*/}
+      <div
+        style={{ display: dispWhichComp === "loader" ? "" : "none" }}
+        className="flex flex-col items-center text-center"
+      >
+        <Loader />
+      </div>
+
+      {/* Succesfull message component */}
+      <div
+        style={{ display: dispWhichComp === "success" ? "flex" : "none" }}
+        className="flex flex-col items-center text-center"
+      >
+        <h2 className="text-[35px] tracking-[0.01em]">Congratulations!</h2>
+        <img className="w-[140px] mt-8" src={verifySucessful} alt="" />
+        <p className="text-[23px] tracking-[0.01em] mt-5 px-3">
+          You have successfully subscribed to my NewsLetter.
+        </p>
+        <button
+          onClick={() => {
+            window.history.back();
+          }}
+          className="text-white bg-[#E53935] mt-5 px-7 py-1 rounded-[15px]"
+        >
+          Go back
+        </button>
       </div>
     </div>
   );
