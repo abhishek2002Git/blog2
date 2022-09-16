@@ -13,8 +13,12 @@ const Verify = () => {
   const [otp, setOtp] = useState(new Array(6).fill(""));
 
   const handleChange = (element, index) => {
+    let enteredKey = element.which || element.keyCode || element.charCode;
     if (isNaN(element.value)) return false;
-
+    // if (element.value == "2") {
+    //   console.log("2 is entered");
+    //   element.previousSibling.focus();
+    // }
     setOtp([...otp.map((d, idx) => (idx === index ? element.value : d))]);
 
     //Focus next input
