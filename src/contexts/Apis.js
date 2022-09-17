@@ -16,9 +16,10 @@ const APIProvider = ({ children }) => {
   };
 
   // verifying user by sending verification link through email
-  const [otpToVerify, setOtpToVerify] = useState(123456);
+  const [recipEmailState, setRecipEmailState] = useState("");
+  const [otpToVerify, setOtpToVerify] = useState(1234);
   const sendOtpMail = async (recipientMail) => {
-    let otpCode = Math.floor(100000 + Math.random() * 900000); // 6 digit random number
+    let otpCode = Math.floor(1000 + Math.random() * 9000); // 6 digit random number
     const response = await fetch(`${host}/api/mail/verify/${recipientMail}`, {
       method: "GET",
       headers: {
@@ -28,6 +29,7 @@ const APIProvider = ({ children }) => {
     const json = await response.json();
     console.log(json);
     setOtpToVerify(otpCode);
+    setRecipEmailState(recipientMail);
   };
 
   return (
@@ -37,6 +39,7 @@ const APIProvider = ({ children }) => {
         blogPostData,
         sendOtpMail,
         otpToVerify,
+        recipEmailState,
       }}
     >
       {children}

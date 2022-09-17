@@ -7,18 +7,16 @@ import verifySucessful from "../images/emailVerificationSuccess.png";
 
 const Verify = () => {
   const { scrollDir, deviceMobile } = AppState();
-  const { otpToVerify } = APIState();
+  const { otpToVerify, recipEmailState, sendOtpMail } = APIState();
 
   // otp related
-  const [otp, setOtp] = useState(new Array(6).fill(""));
+  const [otp, setOtp] = useState(new Array(4).fill(""));
 
   const handleChange = (element, index) => {
-    let enteredKey = element.which || element.keyCode || element.charCode;
     if (isNaN(element.value)) return false;
-    // if (element.value == "2") {
-    //   console.log("2 is entered");
-    //   element.previousSibling.focus();
-    // }
+    if (element.value.length > 1) {
+      element.value = element.value.slice(0, 1);
+    }
     setOtp([...otp.map((d, idx) => (idx === index ? element.value : d))]);
 
     //Focus next input
@@ -80,9 +78,25 @@ const Verify = () => {
           })}
         </div>
 
+        <p
+          className="text-[#E53935] font-[600] mt-1 select-none"
+          onClick={() => {
+            setOtp(new Array(4).fill(""));
+          }}
+        >
+          Clear
+        </p>
+
         <div className="flex mt-5">
           <p className="text-[#7c7b7b]">If you didn't recieve a code!</p>
-          <p className="text-[#E53935] font-[600] ml-1">Resend</p>
+          <p
+            onClick={() => {
+              sendOtpMail(recipEmailState);
+            }}
+            className="text-[#E53935] font-[600] ml-1 select-none"
+          >
+            Resend
+          </p>
         </div>
 
         <button

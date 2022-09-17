@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { AppState } from "../contexts/Context";
 import "./footer.css";
 import { APIState } from "../contexts/Apis";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
@@ -13,10 +13,12 @@ const Footer = () => {
     setSubsEmailAddress(e.target.value);
   };
   let navigate = useNavigate();
+  let location = useLocation();
 
   return (
     <div
       className={sidebar === true ? "side-bar-open" : ""}
+      style={{ display: location.pathname == "/verify" ? "none" : "" }} // dont show footer on 'Verify' componenet
       onClick={() => {
         setSidebar(false);
       }}
