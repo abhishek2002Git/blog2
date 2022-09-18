@@ -64,6 +64,15 @@ const AppProvider = ({ children }) => {
     mobileOrBrowser();
   }, []);
 
+  // show toast
+  const [showToast, setShowToast] = useState(false);
+  const showToastFunction = () => {
+    setShowToast(true);
+    setTimeout(() => {
+      setShowToast(false);
+    }, 3000);
+  };
+
   return (
     <AppContext.Provider
       value={{
@@ -74,6 +83,8 @@ const AppProvider = ({ children }) => {
         setSidebar,
         scrollDir,
         deviceMobile,
+        showToast,
+        showToastFunction,
       }}
     >
       {children}

@@ -6,7 +6,7 @@ import otpSymbol from "../images/sendotp.png";
 import verifySucessful from "../images/emailVerificationSuccess.png";
 
 const Verify = () => {
-  const { scrollDir, deviceMobile } = AppState();
+  const { scrollDir, deviceMobile, showToastFunction } = AppState();
   const { otpToVerify, recipEmailState, sendOtpMail } = APIState();
 
   // otp related
@@ -91,7 +91,8 @@ const Verify = () => {
           <p className="text-[#7c7b7b]">If you didn't recieve a code!</p>
           <p
             onClick={() => {
-              sendOtpMail(recipEmailState);
+              // sendOtpMail(recipEmailState);
+              showToastFunction();
             }}
             className="text-[#E53935] font-[600] ml-1 select-none"
           >
