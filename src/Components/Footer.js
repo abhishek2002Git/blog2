@@ -6,7 +6,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
-  const { setSidebar, sidebar } = AppState();
+  const { setSidebar, sidebar, showToastFunction } = AppState();
   const { sendOtpMail } = APIState();
   const [subsEmailAddress, setSubsEmailAddress] = useState("");
   const changeSubsEmailAdd = (e) => {
@@ -45,6 +45,7 @@ const Footer = () => {
               className="subscribe-btn"
               onClick={() => {
                 sendOtpMail(subsEmailAddress);
+                showToastFunction("success", "An email is sent to your email address");
                 navigate("/verify");
                 window.scrollTo(0, 0);
               }}

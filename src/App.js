@@ -11,7 +11,6 @@ import Toast from "./Components/Toast";
 import Verify from "./Components/Verify";
 import { AppState } from "./contexts/Context";
 import "./App.css";
-import { useRef } from "react";
 
 function App() {
   const { sidebar } = AppState();
@@ -20,22 +19,11 @@ function App() {
   document.body.style.backgroundColor = sidebar == true ? "black" : "";
   document.body.style.overflow = sidebar == true ? "hidden" : "";
 
-  // snackbar related
-  const snackbarRef = useRef(null);
-
   return (
     <div className={sidebar === true ? "" : ""}>
       <Router>
         <Navbar />
-        <Toast ref={snackbarRef} message="email has been sent" type="success" />
-        {/* <button
-          className="showSnackbarBttn mt-20"
-          onClick={() => {
-            snackbarRef.current.show();
-          }}
-        >
-          Show Snackbar
-        </button> */}
+        <Toast />
         <Sidebar2 />
         <Routes>
           <Route exact path="/blog" element={<Home />} />

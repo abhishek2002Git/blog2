@@ -91,8 +91,8 @@ const Verify = () => {
           <p className="text-[#7c7b7b]">If you didn't recieve a code!</p>
           <p
             onClick={() => {
-              // sendOtpMail(recipEmailState);
-              showToastFunction();
+              sendOtpMail(recipEmailState);
+              showToastFunction("success", "An email is sent to your email address");
             }}
             className="text-[#E53935] font-[600] ml-1 select-none"
           >

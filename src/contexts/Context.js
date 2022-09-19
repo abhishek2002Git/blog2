@@ -65,11 +65,16 @@ const AppProvider = ({ children }) => {
   }, []);
 
   // show toast
-  const [showToast, setShowToast] = useState(false);
-  const showToastFunction = () => {
-    setShowToast(true);
+  const [showToast, setShowToast] = useState({
+    show: false,
+    type: "success",
+    message: "An email has been sent to your email address",
+    // message: "An email has been sent",
+  });
+  const showToastFunction = (toastType, toastMessage) => {
+    setShowToast({ show: true, type: toastType, message: toastMessage });
     setTimeout(() => {
-      setShowToast(false);
+      setShowToast({ show: false });
     }, 3000);
   };
 
