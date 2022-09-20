@@ -69,7 +69,6 @@ const AppProvider = ({ children }) => {
     show: false,
     type: "success",
     message: "An email has been sent to your email address",
-    // message: "An email has been sent",
   });
   const showToastFunction = (toastType, toastMessage) => {
     setShowToast({ show: true, type: toastType, message: toastMessage });
@@ -77,6 +76,9 @@ const AppProvider = ({ children }) => {
       setShowToast({ show: false });
     }, 3000);
   };
+
+  // show subscription modal
+  const [showModal, setShowModal] = useState(false);
 
   return (
     <AppContext.Provider
@@ -90,6 +92,8 @@ const AppProvider = ({ children }) => {
         deviceMobile,
         showToast,
         showToastFunction,
+        showModal,
+        setShowModal,
       }}
     >
       {children}
