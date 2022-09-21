@@ -5,8 +5,17 @@
   /*above three properties are used to center the main element; */
   width: 90vw;
   max-width: 500px;
-  height: 90vw;
+  height: 120vw;
   max-height: 500px;
+}
+
+.subscribe-text{
+  /* font-size: 25px; */
+  font-size: clamp(25px, 2.65vw, 40px);
+}
+
+.yes-button {
+  font-size: clamp(15px, 1.2vw, 18px);
 }
 
 #show {
@@ -26,3 +35,4 @@
     opacity: 1;
   }
 }
+
