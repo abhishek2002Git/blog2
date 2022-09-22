@@ -24,7 +24,7 @@ const Modal = () => {
       setShowModal(false);
       window.scrollTo(0, 0);
     } else {
-      showToastFunction("success", "Enter a valid email address");
+      showToastFunction("warning", "Enter a valid email address");
     }
   };
   return (

@@ -1,15 +1,31 @@
 import React from "react";
 import { AppState } from "../contexts/Context";
 import successMark from "../images/success.png";
+import warningMark from "../images/warning.png";
 import "./toast.css";
 
 const Toast = () => {
   const { showToast } = AppState();
   return (
-    <div id={showToast.show ? "show" : "hide"} className="toast z-10 fixed top-[5%] left-[50%] flex bg-green-100 min-w-[300px] items-center px-3 py-1 mt-5 rounded-[13px] text-black">
-      <div className="symbol bg-green-500 h-[45px] w-[45px] rounded-[50%] flex justify-center items-center">
+    <div
+      id={showToast.show ? "show" : "hide"}
+      className={`toast z-10 fixed top-[5%] left-[50%] flex bg-${
+        showToast.type == "success" ? "green" : "red"
+      }-100 max-w-[500px] w-[97vw] items-center px-3 py-1 mt-5 rounded-[13px] text-black border border-${
+        showToast.type == "success" ? "green" : "red"
+      }-500`}
+    >
+      <div
+        className={`first:symbol bg-${
+          showToast.type == "success" ? "green" : "red"
+        }-500 h-[45px] w-[45px] rounded-[50%] flex justify-center items-center`}
+      >
         <div className="bg-white h-[30px] w-[30px] rounded-[50%] flex justify-center items-center">
-          <img className="w-[20px]" src={successMark} alt="" />
+          <img
+            className={`w-[${showToast.type === "success" ? "20px" : "30px"}]`}
+            src={showToast.type === "success" ? successMark : warningMark}
+            alt=""
+          />
         </div>
       </div>
       <div className="message text-[20px] flex-[90%] ml-3">

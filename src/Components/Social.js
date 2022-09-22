@@ -15,7 +15,7 @@ const Social = () => {
       </h2>
       <div className="slides w-[100%]">
         <ul className="flex items-center flex-col mt-5 w-[100%]">
-            <li onClick={()=>{window.location="https://twitter.com/abhiShukla202"}} className="w-[80%] border-black border-b-2 flex py-3 text-red-600 hover:cursor-pointer">
+            <li onClick={()=>{window.location="https://twitter.com/abhiShukla203"}} className="w-[80%] border-black border-b-2 flex py-3 text-red-600 hover:cursor-pointer">
               <div className="text-[23px]">
                 <FaTwitter />
               </div>

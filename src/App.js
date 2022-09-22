@@ -10,6 +10,7 @@ import Carousel from "./Components/Carousel";
 import Toast from "./Components/Toast";
 import Verify from "./Components/Verify";
 import Modal from "./Components/Modal";
+import Contact from "./Components/Contact";
 import { AppState } from "./contexts/Context";
 import "./App.css";
 
@@ -35,10 +36,11 @@ function App() {
         <Modal />
         <Sidebar2 />
         <Routes>
-          <Route exact path="/blog" element={<Home />} />
-          <Route exact path="/blogs" element={<Blog />} />
+          {/* <Route exact path="/blog" element={<Home />} /> */}
+          <Route exact path="/blog" element={<Blog />} />
           <Route exact path="/blog/:id" element={<Post />} />
           <Route exact path="/verify" element={<Verify />} />
+          <Route exact path="/contact" element={<Contact />} />
           <Route exact path="/carousel" element={<Carousel />} />
         </Routes>
         <Footer />

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./navbar.css";
 import searchIcon from "./icons8-search.svg";
 import { AppState } from "../contexts/Context";
@@ -6,6 +7,7 @@ import logo from "../images/logo.png"
 
 const Navbar = () => {
   const { showSidebar, scrollDir, sidebar } = AppState();
+  let navigate = useNavigate();
 
   return (
     <nav
@@ -35,8 +37,8 @@ const Navbar = () => {
               <div>PORTFOLIO</div>
             </ul>
           </li>
-          <li className="nav-li">
-            <a className="nav-a" href="#">
+          <li onClick={()=>{navigate("/blog");}} className="nav-li">
+            <a className="nav-a" >
               BLOG
             </a>
           </li>
@@ -53,11 +55,6 @@ const Navbar = () => {
           <li className="nav-li">
             <a className="nav-a" href="#">
               JAVASCRIPT
-            </a>
-          </li>
-          <li className="nav-li">
-            <a className="nav-a search-icon" href="#">
-              BOOKMARKS
             </a>
           </li>
           <li className="nav-li">

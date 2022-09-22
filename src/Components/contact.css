@@ -1,0 +1,10 @@
+.contact-section {
+  width: min(24vw, 316px);
+  margin-left: 38%;
+}
+
+@media (max-width: 920px) {
+  .trending-section {
+    width: 85vw;
+  }
+}

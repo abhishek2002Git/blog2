@@ -60,7 +60,7 @@ const Footer = () => {
           <div className="social-boxes">
             <div
               onClick={() => {
-                window.location = "https://twitter.com/abhiShukla202";
+                window.location = "https://twitter.com/abhiShukla203";
               }}
               className="social-box"
             >

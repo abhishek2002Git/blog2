@@ -45,6 +45,7 @@
   color: #000000;
   padding: 7px;
   border-radius: 15px;
+  cursor: pointer;
 }
 
 .nav-a:hover {
