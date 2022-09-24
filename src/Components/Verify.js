@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { AppState } from "../contexts/Context";
 import { APIState } from "../contexts/Apis";
 import Loader from "./Loader";
@@ -8,6 +9,7 @@ import verifySucessful from "../images/emailVerificationSuccess.png";
 const Verify = () => {
   const { scrollDir, deviceMobile, showToastFunction } = AppState();
   const { otpToVerify, recipEmailState, sendOtpMail } = APIState();
+  let navigate = useNavigate();
 
   // otp related
   const [otp, setOtp] = useState(new Array(4).fill(""));
@@ -27,6 +29,12 @@ const Verify = () => {
 
   const [dispWhichComp, setDispWhichComp] = useState("verify");
   // above state describes which component to display out of verify otp, loader, success message
+
+  // useEffect(() => {
+  //   if (otpToVerify == 1234) {
+  //     navigate("/");
+  //   }
+  // }, []);
 
   const verifyOtp = () => {
     let EnteredOtp = otp.join("");
@@ -92,7 +100,10 @@ const Verify = () => {
           <p
             onClick={() => {
               sendOtpMail(recipEmailState);
-              showToastFunction("success", "An email is sent to your email address");
+              showToastFunction(
+                "success",
+                "An email is sent to your email address"
+              );
             }}
             className="text-[#E53935] font-[600] ml-1 select-none"
           >

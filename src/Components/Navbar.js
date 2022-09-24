@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./navbar.css";
 import searchIcon from "./icons8-search.svg";
 import { AppState } from "../contexts/Context";
-import logo from "../images/logo.png"
+import logo from "../images/logo.png";
 
 const Navbar = () => {
   const { showSidebar, scrollDir, sidebar } = AppState();
@@ -14,7 +14,7 @@ const Navbar = () => {
       style={{
         top: scrollDir == "scrolling down" ? "-75px" : "0px",
         boxShadow: scrollDir == "scrolling down" ? "" : "0px 0px 10px #dbd7d7",
-        zIndex:'9'
+        zIndex: "9",
       }}
       className={sidebar === true ? "navbar side-bar-open" : "navbar"}
     >
@@ -22,9 +22,11 @@ const Navbar = () => {
         <div className="logo">
           <img
             id="logoImg"
-            // src="https://smlclone.netlify.app/images/shoutmeloud.png"
             src={logo}
             alt="image"
+            onClick={() => {
+              navigate("/");
+            }}
           />
         </div>
         <ul className="nav-ul">
@@ -33,14 +35,29 @@ const Navbar = () => {
               ABOUT ME
             </a>
             <ul className="drop-ul">
-              <div>CONTACT</div>
-              <div>PORTFOLIO</div>
+              <div
+                onClick={() => {
+                  navigate("/contact");
+                }}
+              >
+                CONTACT
+              </div>
+              <div
+                onClick={() => {
+                  navigate("/");
+                }}
+              >
+                PORTFOLIO
+              </div>
             </ul>
           </li>
-          <li onClick={()=>{navigate("/blog");}} className="nav-li">
-            <a className="nav-a" >
-              BLOG
-            </a>
+          <li
+            onClick={() => {
+              navigate("/blog");
+            }}
+            className="nav-li"
+          >
+            <a className="nav-a">BLOG</a>
           </li>
           <li className="nav-li">
             <a className="nav-a" href="#">

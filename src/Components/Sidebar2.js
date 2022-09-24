@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { AppState } from "../contexts/Context";
 import "./sidebar2.css";
 
@@ -21,27 +22,37 @@ const Sidebar2 = () => {
             &times;
           </span>
           <ul className="side-ul">
-            <li className="side-li">DARK</li>
             <li onClick={showSubItemAbout} className="side-li">
               ABOUT ME <i className="arrow down"></i>
             </li>
             <li
+              onClick={showSidebar}
               style={{ display: subItemAbout ? "" : "none" }}
               className="side-li sub-item-about"
             >
-              <i className="arrow right"></i>PORTFOLIO
+              <i className="arrow right"></i>
+              <Link to="/">PORTFOLIO</Link>
             </li>
             <li
+              onClick={showSidebar}
               style={{ display: subItemAbout ? "" : "none" }}
               className="side-li sub-item-about"
             >
-              <i className="arrow right"></i>CONTACT
+              <i className="arrow right"></i>
+              <Link to="/contact">CONTACT</Link>
             </li>
-            <li className="side-li">BLOG</li>
-            <li className="side-li">REACTJS</li>
-            <li className="side-li">CSS</li>
-            <li className="side-li">JAVASCRIPT</li>
-            <li className="side-li">BOOKMARKS</li>
+            <li onClick={showSidebar} className="side-li">
+              <Link to="/blog">BLOG</Link>
+            </li>
+            <li onClick={showSidebar} className="side-li">
+              REACTJS
+            </li>
+            <li onClick={showSidebar} className="side-li">
+              CSS
+            </li>
+            <li onClick={showSidebar} className="side-li">
+              JAVASCRIPT
+            </li>
           </ul>
         </div>
       </div>

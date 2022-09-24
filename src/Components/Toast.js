@@ -9,11 +9,11 @@ const Toast = () => {
   return (
     <div
       id={showToast.show ? "show" : "hide"}
-      className={`toast z-10 fixed top-[5%] left-[50%] flex bg-${
-        showToast.type == "success" ? "green" : "red"
-      }-100 max-w-[500px] w-[97vw] items-center px-3 py-1 mt-5 rounded-[13px] text-black border border-${
-        showToast.type == "success" ? "green" : "red"
-      }-500`}
+      style={{
+        background: showToast.type === "success" ? "#dcfce7" : "#fee2e2",
+        borderColor: showToast.type === "success" ? "#22c55e" : "#ef4444",
+      }}
+      className={`toast z-10 fixed top-[5%] left-[50%] flex max-w-[500px] w-[97vw] items-center px-3 py-1 mt-5 rounded-[13px] text-black border`}
     >
       <div
         className={`first:symbol bg-${
