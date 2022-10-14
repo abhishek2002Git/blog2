@@ -45,7 +45,7 @@ const Verify = () => {
         setDispWhichComp("success");
       }, 2000);
     } else {
-      alert("Invalid OTP");
+      showToastFunction("warning", "You have entered an invalid OTP");
     }
   };
 

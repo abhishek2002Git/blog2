@@ -19,8 +19,7 @@ const APIProvider = ({ children }) => {
   const [recipEmailState, setRecipEmailState] = useState("");
   const [otpToVerify, setOtpToVerify] = useState(1234);
   const sendOtpMail = async (recipientMail) => {
-    setOtpToVerify(otpCode);
-    let otpCode = Math.floor(1000 + Math.random() * 9000); // 6 digit random number
+    let otpCode = Math.floor(1000 + Math.random() * 9000); // 4 digit random number
     const response = await fetch(`${host}/api/mail/verify/${recipientMail}`, {
       method: "GET",
       headers: {
@@ -29,6 +28,7 @@ const APIProvider = ({ children }) => {
     });
     const json = await response.json();
     console.log(json);
+    setOtpToVerify(otpCode);
     setRecipEmailState(recipientMail);
   };
 
