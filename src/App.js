@@ -37,6 +37,7 @@ function App() {
         <Sidebar2 />
         <Routes>
           {/* <Route exact path="/blog" element={<Home />} /> */}
+          <Route exact path="/" element={<Home />} />
           <Route exact path="/blog" element={<Blog />} />
           <Route exact path="/blog/:id" element={<Post />} />
           <Route exact path="/verify" element={<Verify />} />

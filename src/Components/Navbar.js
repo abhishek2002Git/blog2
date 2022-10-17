@@ -30,6 +30,11 @@ const Navbar = () => {
           />
         </div>
         <ul className="nav-ul">
+          <li className="nav-li">
+            <a className="nav-a" href="#">
+              HOME
+            </a>
+          </li>
           <li style={{ zIndex: "2" }} className="nav-li drop-li">
             <a className="nav-a" href="#">
               ABOUT ME
@@ -61,19 +66,10 @@ const Navbar = () => {
           </li>
           <li className="nav-li">
             <a className="nav-a" href="#">
-              REACTJS
+              PROJECTS
             </a>
           </li>
-          <li className="nav-li">
-            <a className="nav-a" href="#">
-              CSS
-            </a>
-          </li>
-          <li className="nav-li">
-            <a className="nav-a" href="#">
-              JAVASCRIPT
-            </a>
-          </li>
+      
           <li className="nav-li">
             <a href="#">
               <img style={{ marginTop: "30px" }} src={searchIcon} alt="" />

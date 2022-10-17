@@ -1,0 +1,18 @@
+.intro-home{
+    background: linear-gradient(to right,rgba(245,245,245,.8),rgba(245,245,245,.8)),url(https://d33wubrfki0l68.cloudfront.net/daac8858fd4a0ccea44f59dfd079c3c16c263f33/c157c/assets/svg/common-bg.svg);
+     position: relative;
+    /* background-position: center; */ 
+}
+
+.heading-primary{
+    font-size: clamp(40px, 4.54vw, 70px);
+}
+
+.text-primary{
+    font-size: clamp(18px, 1.51vw, 22px);
+
+}
+
+.project-btn{
+    box-shadow: 0 5px 15px 0 rgb(0 0 0 / 15%);
+}
