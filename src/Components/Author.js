@@ -15,10 +15,8 @@ const Author = () => {
           Authored By Abhishek Shukla
         </h3>
         <p className="author-bio text-[13px] mt-1">
-          A Blogger, Author and a speaker! Harsh Agrawal is recognized as a
-          leader in digital marketing and FinTech space. Fountainhead of
-          ShoutMeLoud, and a Speaker at ASW, Hero Mindmine, Inorbit, IBM, India
-          blockchain summit. Also, an award-winning blogger.
+        I'm a Frontend Web Developer building the Front-end of Websites and Web Applications that leads to the success of the overall product. While building any product, I make sure whatever I'm building, it's going to solve problems and it's going to provide value no matter how small or large the product is.
+          
         </p>
       </div>
     </div>

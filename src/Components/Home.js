@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import {
   FaTwitter,
   FaInstagram,
@@ -9,24 +10,53 @@ import {
 import "./home.css";
 
 const Home = () => {
+  let navigate = useNavigate();
   return (
     <div className="mt-[40px]">
       <div className="intro-home h-[110vh] max-h-[38rem] text-center flex flex-col justify-center items-center">
         {/****************** Social Icons *************/}
         <div className="social-icons-home h-[45vh] bg-white self-start w-[60px] z-[2] absolute flex-col justify-around items-center hidden lg:flex">
-          <div className="text-[30px]">
+          <div
+            onClick={() => {
+              window.open(
+                "https://www.linkedin.com/in/abishekashukla",
+                "_blank"
+              );
+            }}
+            className="text-[30px]"
+          >
             <FaLinkedin />
           </div>
-          <div className="text-[30px]">
+          <div
+            onClick={() => {
+              window.open("https://twitter.com/abishekashukla", "_blank");
+            }}
+            className="text-[30px]"
+          >
             <FaTwitter />
           </div>
-          <div className="text-[30px]">
+          <div
+            onClick={() => {
+              window.open("https://www.instagram.com/abishekashukla", "_blank");
+            }}
+            className="text-[30px]"
+          >
             <FaInstagram />
           </div>
-          <div className="text-[30px]">
+          <div
+            onClick={() => {
+              window.open("https://github.com/abishekashukla", "_blank");
+            }}
+            className="text-[30px]"
+          >
             <FaGithub />
           </div>
-          <div className="text-[30px]">
+          <div
+            onClick={() => {
+              window.open("https://blog203.vercel.app/blog", "_blank");
+            }}
+            className="text-[30px]"
+          >
             <FaBookOpen />
           </div>
         </div>
@@ -39,9 +69,11 @@ const Home = () => {
           A Frontend focused Web Developer building the Frontend of Websites and
           Web Applications that leads to the success of the overall product
         </p>
-        <button className="project-btn w-[240px] h-[55px] bg-[#E53935] rounded-[5px] text-[white] font-[700] mt-[40px]">
-          PROJECTS
-        </button>
+        <a href="#projectsection">
+          <button className="project-btn w-[240px] h-[55px] bg-[#E53935] rounded-[5px] text-[white] font-[700] mt-[40px]">
+            PROJECTS
+          </button>
+        </a>
       </div>
 
       {/* ************************ About Me Section ************************* */}
@@ -91,7 +123,13 @@ const Home = () => {
             </p>
 
             {/* <button className="project-btn w-[173px] h-[55px] bg-[#E53935] rounded-[5px] text-[white] font-[700] mt-[25px] text-[16px]"> */}
-            <button className="project-btn w-[155px] md:w-[173px] h-[48px] md:h-[55px] bg-[#E53935] rounded-[5px] text-[white] font-[700] mt-[25px] text-[14px] md:text-[16px]">
+            <button
+              onClick={() => {
+                navigate("/contact");
+                window.scrollTo(0, 0);
+              }}
+              className="project-btn w-[155px] md:w-[173px] h-[48px] md:h-[55px] bg-[#E53935] rounded-[5px] text-[white] font-[700] mt-[25px] text-[14px] md:text-[16px]"
+            >
               CONTACT
             </button>
           </div>
@@ -139,14 +177,17 @@ const Home = () => {
       </section>
 
       {/* ************************ Projects Section *********************/}
-      <section className="flex flex-col items-center py-[75px] md:py-[100px]">
+      <section
+        id="projectsection"
+        className="flex flex-col items-center py-[75px] md:py-[100px]"
+      >
         <h1 className="about-me-title text-[#111111] font-[800] tracking-[3px]">
           PROJECTS
         </h1>
         <div className="bg-[#E53935] w-[30px] h-[5px] my-[13px]"></div>
         <p className="text-[#555555] text-[16px] leading-[1.6] w-[92%] max-w-[49rem] font-[500] text-center md:text-[18px]">
-          Here you will find some of the personal and clients projects that I
-          created with each project containing its own case study
+          Here you will find some of the projects that I created with each
+          project containing its own case study
         </p>
 
         <div className="project flex md:flex-row flex-col pt-[65px] md:pt-[90px]">
@@ -164,10 +205,12 @@ const Home = () => {
               community of their favorite youtube channels and can be part of
               the conversation.
             </p>
-            <button className="project-btn text-[13px] md:text-[15px] text-[#ffffff] bg-[#E53539] tracking-[1px] font-[700] rounded-[5px] py-[1em] px-[3.3em]">CASE STUDY</button>
+            <button className="project-btn text-[13px] md:text-[15px] text-[#ffffff] bg-[#E53539] tracking-[1px] font-[700] rounded-[5px] py-[1em] px-[3.3em]">
+              CASE STUDY
+            </button>
           </div>
         </div>
-        
+
         <div className="project flex md:flex-row flex-col pt-[65px] md:pt-[90px]">
           <div className="md:w-[55%] w-[100%] flex md:justify-end justify-center">
             <img
@@ -177,11 +220,17 @@ const Home = () => {
             />
           </div>
           <div className="w-[100%] md:w-[45%] flex flex-col justify-center md:items-start items-center md:pl-10">
-            <h2 className="text-[26px] font-[700] mb-[1rem]">Boreal Coffee Clone</h2>
+            <h2 className="text-[26px] font-[700] mb-[1rem]">
+              Boreal Coffee Clone
+            </h2>
             <p className="text-[16px] md:text-[17px] text-[#666666] mb-[2rem] leading-[1.7] max-w-[30rem] px-3">
-            I re-created the frontend of Boreal Coffee's official web app because I got attracted to their beautiful UI. It was a great experience for me to build the entire frontend.
+              I re-created the frontend of Boreal Coffee's official web app
+              because I got attracted to their beautiful UI. It was a great
+              experience for me to build the entire frontend.
             </p>
-            <button className="project-btn text-[13px] md:text-[15px] text-[#ffffff] bg-[#E53539] tracking-[1px] font-[700] rounded-[5px] py-[1em] px-[3.3em]">CASE STUDY</button>
+            <button className="project-btn text-[13px] md:text-[15px] text-[#ffffff] bg-[#E53539] tracking-[1px] font-[700] rounded-[5px] py-[1em] px-[3.3em]">
+              CASE STUDY
+            </button>
           </div>
         </div>
       </section>

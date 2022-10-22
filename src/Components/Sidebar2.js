@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { AppState } from "../contexts/Context";
 import "./sidebar2.css";
 
 const Sidebar2 = () => {
+  let navigate = useNavigate();
   const { sidebar, showSidebar } = AppState();
   const [subItemAbout, setSubItemAbout] = useState(false);
   const showSubItemAbout = () => {
@@ -22,11 +24,25 @@ const Sidebar2 = () => {
             &times;
           </span>
           <ul className="side-ul">
+            <li
+              onClick={() => {
+                navigate("/");
+                window.scrollTo(0, 0);
+                showSidebar();
+              }}
+              className="side-li"
+            >
+              HOME
+            </li>
             <li onClick={showSubItemAbout} className="side-li">
               ABOUT ME <i className="arrow down"></i>
             </li>
             <li
-              onClick={showSidebar}
+              onClick={() => {
+                navigate("/");
+                window.scrollTo(0, 0);
+                showSidebar();
+              }}
               style={{ display: subItemAbout ? "" : "none" }}
               className="side-li sub-item-about"
             >
@@ -34,24 +50,35 @@ const Sidebar2 = () => {
               <Link to="/">PORTFOLIO</Link>
             </li>
             <li
-              onClick={showSidebar}
+              onClick={() => {
+                navigate("/contact");
+                window.scrollTo(0, 0);
+                showSidebar();
+              }}
               style={{ display: subItemAbout ? "" : "none" }}
               className="side-li sub-item-about"
             >
               <i className="arrow right"></i>
               <Link to="/contact">CONTACT</Link>
             </li>
-            <li onClick={showSidebar} className="side-li">
-              <Link to="/blog">BLOG</Link>
+            <li
+              onClick={() => {
+                navigate("/blog");
+                window.scrollTo(0, 0);
+                showSidebar();
+              }}
+              className="side-li"
+            >
+              BLOG
             </li>
-            <li onClick={showSidebar} className="side-li">
-              REACTJS
-            </li>
-            <li onClick={showSidebar} className="side-li">
-              CSS
-            </li>
-            <li onClick={showSidebar} className="side-li">
-              JAVASCRIPT
+            <li
+              onClick={() => {
+                navigate("/");
+                showSidebar();
+              }}
+              className="side-li"
+            >
+              <a href="#projectsection">PROJECTS</a>
             </li>
           </ul>
         </div>

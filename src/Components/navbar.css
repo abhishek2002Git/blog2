@@ -16,14 +16,10 @@
 }
 
 .logo {
-  margin-left: 5.6vw;
-  margin-top: 12px;
+  margin-left: 4vw;
+  /* margin-top: 12px; */
 }
 
-#logoImg {
-  /* min-height: auto; */
-  width: 150px;
-}
 
 .nav-ul {
   display: flex;
@@ -130,18 +126,23 @@
   }
   .logo {
     margin-left: 5.6vw;
-    margin-top: 11px;
+    /* margin-top: 11px; */
   }
 
   #logoImg {
-    width: 110px;
+    height: 40.3px;
+  }
+  #logoText{
+    font-size: 14px;
   }
   .menu-icon {
     margin-top: 13px;
+    width: 27px;
+    height: 27px;
   }
 
   .div-menu-icon {
-    width: 30px;
-    height: 4px;
+    width: 100%;
+    height: 11%;
   }
 }

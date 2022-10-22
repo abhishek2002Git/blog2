@@ -12,13 +12,12 @@ import { Link } from "react-router-dom";
 import "./content.css";
 
 const Content = () => {
-  const {blogPostData } = APIState();
+  const { blogPostData } = APIState();
 
   return (
     <div className="content-section bg-white w-[57%] mt-[25px] flex flex-col items-center">
       <div>
-      <Link to="/blog/beauty-full"><ContentHeader /></Link>
-      
+        <ContentHeader />
       </div>
 
       <div className="post-title">

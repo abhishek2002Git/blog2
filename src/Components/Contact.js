@@ -22,10 +22,10 @@ const Contact = () => {
         </div>
         <div>
           <div className="author-texts">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas cum
-            ut laborum quaerat fugiat voluptatum incidunt nesciunt alias ullam
-            inventore, soluta iusto molestiae tempore distinctio vero.
-            Repudiandae molestiae error similique.
+          I'm a Frontend Web Developer building the Front-end of Websites and Web Applications that leads to the success of the overall product.
+          </div>
+          <div className="author-texts">
+          I'm open to Job opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience then don't hesitate to contact me.
           </div>
 
           <div className="author-texts flex">
@@ -48,15 +48,15 @@ const Contact = () => {
             <p className="">Message me on Twitter:</p>
             <a href="https://twitter.com/messages/compose?recipient_id=abhishukla203">
             <p className="text-[#E53935] underline ml-1">
-                @abhiShukla203
+                @abishekAshukla
               </p>
             </a>
           </div>
         </div>
         <div className="social-links">
-          <div className="social-link-author"><a href="https://twitter.com/abhiShukla203">Twitter</a></div>
-          <div className="social-link-author"><a href="https://www.linkedin.com/in/abhi203">LinkedIn</a></div>
-          <div className="social-link-author"><a href="https://www.instagram.com/theabhishekshukla2002">Instagram</a></div>
+          <div className="social-link-author"><a href="https://twitter.com/abishekashukla">Twitter</a></div>
+          <div className="social-link-author"><a href="https://www.linkedin.com/in/abishekashukla">LinkedIn</a></div>
+          <div className="social-link-author"><a href="https://www.instagram.com/abishekashukla">Instagram</a></div>
         </div>
       </div>
     </section>

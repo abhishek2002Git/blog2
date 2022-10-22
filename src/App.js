@@ -1,5 +1,5 @@
-import React, {useEffect} from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import React, { useEffect } from "react";
+import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Home from "./Components/Home";
 import Blog from "./Components/Blog";
 import Post from "./Components/Post";
@@ -17,11 +17,12 @@ import "./App.css";
 function App() {
   const { sidebar, setShowModal } = AppState();
 
+
   // for showing subscription modal
   useEffect(() => {
     setTimeout(() => {
       setShowModal(true);
-    }, 5000);
+    }, 10000);
   }, []);
 
   // styling when sidebar gets open
