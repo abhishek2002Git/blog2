@@ -1,0 +1,18 @@
+.overview h2{
+    font-size: clamp(21px, 2.12vw, 30px);
+    margin-bottom: 1.7rem;
+    margin-top: 3rem;
+    font-weight: 700;
+}
+
+.overview p{
+    font-size: clamp(16px, 1.36vw, 20px);
+    margin-bottom: 1.2rem;
+    color: #666666;
+    line-height: 1.7;
+}
+
+.project-btn{
+    box-shadow: 0 5px 15px 0 rgb(0 0 0 / 15%);
+    transition: transform .3s;
+}

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./Components/Home";
 import Blog from "./Components/Blog";
 import Post from "./Components/Post";
@@ -11,12 +11,13 @@ import Toast from "./Components/Toast";
 import Verify from "./Components/Verify";
 import Modal from "./Components/Modal";
 import Contact from "./Components/Contact";
+import TopButton from "./Components/TopButton";
+import Project from "./Components/Project";
 import { AppState } from "./contexts/Context";
 import "./App.css";
 
 function App() {
   const { sidebar, setShowModal } = AppState();
-
 
   // for showing subscription modal
   useEffect(() => {
@@ -44,7 +45,9 @@ function App() {
           <Route exact path="/verify" element={<Verify />} />
           <Route exact path="/contact" element={<Contact />} />
           <Route exact path="/carousel" element={<Carousel />} />
+          <Route exact path="/project/:id" element={<Project />} />
         </Routes>
+        <TopButton />
         <Footer />
       </Router>
     </div>
