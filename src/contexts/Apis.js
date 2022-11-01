@@ -3,7 +3,7 @@ import React, { createContext, useContext, useState} from "react";
 const APIContext = createContext();
 
 const APIProvider = ({ children }) => {
-  const host = "https://inotebookbackend.herokuapp.com";
+  const host = "https://backendapis.vercel.app";
 
   // fetching blog post data
   const [blogPostData, setBlogPostData] = useState([]);
