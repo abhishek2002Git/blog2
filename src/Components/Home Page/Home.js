@@ -194,18 +194,26 @@ const Home = () => {
           <div className="md:w-[55%] w-[100%] flex md:justify-end justify-center">
             <img
               className="w-[90%]"
-              src="https://d33wubrfki0l68.cloudfront.net/5b377ce34a47fc89fc8d33869f2342518a604589/71ecb/assets/jpeg/yubter.jpeg"
+              src="https://res.cloudinary.com/dw6ehse4v/image/upload/v1667318540/WhatsApp_Image_2022-11-01_at_9.26.16_PM_sq1v0i.jpg"
               alt=""
             />
           </div>
           <div className="w-[100%] md:w-[45%] flex flex-col justify-center md:items-start items-center md:pl-10">
-            <h2 className="text-[26px] font-[700] mb-[1rem]">Yubter</h2>
+            <h2 className="text-[26px] font-[700] mb-[1rem]">
+              Blog + Portfolio
+            </h2>
             <p className="text-[16px] md:text-[17px] text-[#666666] mb-[2rem] leading-[1.7] max-w-[30rem] px-3">
-              Yubter is a platform that I created where people can join the
-              community of their favorite youtube channels and can be part of
-              the conversation.
+              This is my personal blogging and portfolio site which i have
+              created to share my work and learnings in my frontend development
+              journey.
             </p>
-            <button className="project-btn text-[13px] md:text-[15px] text-[#ffffff] bg-[#E53539] tracking-[1px] font-[700] rounded-[5px] py-[1em] px-[3.3em]">
+            <button
+              onClick={() => {
+                navigate("/project/1");
+                window.scrollTo(0, 0);
+              }}
+              className="project-btn text-[13px] md:text-[15px] text-[#ffffff] bg-[#E53539] tracking-[1px] font-[700] rounded-[5px] py-[1em] px-[3.3em]"
+            >
               CASE STUDY
             </button>
           </div>
@@ -215,20 +223,24 @@ const Home = () => {
           <div className="md:w-[55%] w-[100%] flex md:justify-end justify-center">
             <img
               className="w-[90%]"
-              src="https://d33wubrfki0l68.cloudfront.net/61fc288f39a306e3130c72643480ce015dec48ae/e3272/assets/jpeg/boreal-coffee-clone.jpeg"
+              src="https://res.cloudinary.com/dw6ehse4v/image/upload/v1667982126/talk_jukagx.png"
               alt=""
             />
           </div>
           <div className="w-[100%] md:w-[45%] flex flex-col justify-center md:items-start items-center md:pl-10">
-            <h2 className="text-[26px] font-[700] mb-[1rem]">
-              Boreal Coffee Clone
-            </h2>
+            <h2 className="text-[26px] font-[700] mb-[1rem]">Talk-A-Tive</h2>
             <p className="text-[16px] md:text-[17px] text-[#666666] mb-[2rem] leading-[1.7] max-w-[30rem] px-3">
               I re-created the frontend of Boreal Coffee's official web app
               because I got attracted to their beautiful UI. It was a great
               experience for me to build the entire frontend.
             </p>
-            <button className="project-btn text-[13px] md:text-[15px] text-[#ffffff] bg-[#E53539] tracking-[1px] font-[700] rounded-[5px] py-[1em] px-[3.3em]">
+            <button
+              onClick={() => {
+                navigate("/project/2");
+                window.scrollTo(0, 0);
+              }}
+              className="project-btn text-[13px] md:text-[15px] text-[#ffffff] bg-[#E53539] tracking-[1px] font-[700] rounded-[5px] py-[1em] px-[3.3em]"
+            >
               CASE STUDY
             </button>
           </div>
