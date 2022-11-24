@@ -3,81 +3,43 @@ import java.util.*;
 public class Main {
 
   public static void main(String args[]) {
-    Scanner sc = new Scanner(System.in);
-    System.out.println("Enter number of processes: ");
-    int n = sc.nextInt();
-    int at[] = { 0, 1, 5, 6 };
-    int bt[] = { 2, 2, 3, 4 };
-    int ta[] = new int[n];
-    int ct[] = new int[n];
-    int wt[] = new int[n];
-    int pid[] = { 1, 2, 3, 4 };
-    int flags[] = {0,0,0,0};
-    int temp;
-    int total=0, st=0;
+    int pages[] = { 7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 1, 2, 0 };
+    int noOfPages = pages.length;
+    int frames = 4;
+    int currentFrame[] = new int[frames];
+    int s;
+    int pageFaults = 0, hits = 0;
 
-    // for (int i = 0; i < n; i++) {
-    //   System.out.println("Enter arrival time of " + (i + 1));
-    //   at[i] = sc.nextInt();
-    //   System.out.println("Enter burst time of " + (i + 1));
-    //   bt[i] = sc.nextInt();
-    //   pid[i] = i + 1;
-    // }
-
-    // for (int i = 0; i < n; i++) {
-    //   for (int j = 0; j < (n - (i + 1)); j++) {
-    //     if (at[j] > at[j + 1]) {
-    //       temp = at[j];
-    //       at[j] = at[j + 1];
-    //       at[j + 1] = temp;
-    //       temp = bt[j];
-    //       bt[j] = bt[j + 1];
-    //       bt[j + 1] = temp;
-    //       temp = pid[j];
-    //       pid[j] = pid[j + 1];
-    //       pid[j + 1] = temp;
-    //     }
-    //   }
-    // }
-
-    while(true) {
-      int c = n, min = 9999;
-        if(total == n ) break;
-      for (int i = 0; i < n; i++){
-
-        if(at[i] <= st && flags[i] == 0 && bt[i]<min){
-          min = bt[i];
-          c = i;
-        }
-      }
-      if(c == n) st++; else{
-          ct[c] = st + bt[c];
-          st += bt[c];
-          ta[c] = ct[c] - at[c];
-          wt[c] = ta[c] - bt[c];
-          flags[c] = 1;
-          total++;
-        }
+    for (int i = 0; i < frames; i++) {
+      currentFrame[i] = -1;
     }
 
-    System.out.println(
-      "Pid  " + "At   " + "Bt   " + "Ct  " + "Ta  " + "Wt  " + '\n'
-    );
-    for (int i = 0; i < n; i++) {
-      System.out.println(
-        pid[i] +
-        "    " +
-        at[i] +
-        "    " +
-        bt[i] +
-        "  " +
-        ct[i] +
-        "  " +
-        ta[i] +
-        "  " +
-        wt[i] +
-        '\n'
-      );
+    for (int m = 0; m < noOfPages; m++) {
+      s = 0;
+      for (int n = 0; n < frames; n++) {
+        if (currentFrame[n] == pages[m]) {
+          st++;
+          pageFaults++;
+          hits++;
+        }
+      }
+      pageFaults--;
+      if (pageFaults <= frames && s == 0) {
+        currentFrame[m] = pages[m];
+      } else if (s == 0) {
+        currentFrame[(pageFaults - 1) % frames] = pages[m];
+      }
+
+      // print
+      System.out.println();
+      System.out.print(incomingStream[m] + "\t\t\t");
+      for (int i = 0; i < frames; n++) {
+        if (currentFrame[i] != -1) {
+          System.out.print(currentFrame[i] + "\t\t\t");
+        } else {
+          System.out.print(" - \t\t\t");
+        }
+      }
     }
   }
 }
