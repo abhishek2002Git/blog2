@@ -1,3 +1,6 @@
+// https://ablaze-root-b13.notion.site/b3ed718dee8b41be826b4d4f72378d85?v=5beb317d2f644d9d8beb5d2c0483852b
+// https://github.com/AjayRaut1/SPOS-LP-codes-Sem-5-CS-SPPU-2019-Pattern-/tree/main/LP%20codes%202nd%20Edition(Best%20Version)
+
 import java.util.concurrent.Semaphore;
 
 public class semaphores {
