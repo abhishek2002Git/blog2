@@ -12,6 +12,7 @@ import Modal from "./Components/UI/Modal";
 import Contact from "./Components/Contact Page/Contact"
 import TopButton from "./Components/UI/TopButton";
 import Project from "./Components/Project Page/Project"
+import Resume from "./Components/Resume/Resume";
 import { AppState } from "./contexts/Context";
 import "./App.css";
 
@@ -43,6 +44,7 @@ function App() {
           <Route exact path="/verify" element={<Verify />} />
           <Route exact path="/contact" element={<Contact />} />
           <Route exact path="/project/:id" element={<Project />} />
+          <Route exact path="/resume" element={<Resume />} />
         </Routes>
         <TopButton />
         <Footer />
