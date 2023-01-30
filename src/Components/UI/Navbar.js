@@ -4,7 +4,6 @@ import "./CSS/navbar.css";
 import { AppState } from "../../contexts/Context";
 import profilePic from "../../images/profilepic3.png";
 
-
 const Navbar = () => {
   const { showSidebar, scrollDir, sidebar } = AppState();
   let navigate = useNavigate();
@@ -49,9 +48,16 @@ const Navbar = () => {
           >
             <a className="nav-a">HOME</a>
           </li>
-          <li style={{ zIndex: "2" }} className="nav-li drop-li">
-            <a className="nav-a">ABOUT ME</a>
-            <ul className="drop-ul">
+          <li
+            style={{ zIndex: "2" }}
+            onClick={() => {
+              navigate("/contact");
+              window.scrollTo(0, 0);
+            }}
+            className="nav-li drop-li"
+          >
+            <a className="nav-a">CONTACT</a>
+            {/* <ul className="drop-ul">
               <div
                 onClick={() => {
                   navigate("/contact");
@@ -68,7 +74,7 @@ const Navbar = () => {
               >
                 PORTFOLIO
               </div>
-            </ul>
+            </ul> */}
           </li>
           <li
             onClick={() => {

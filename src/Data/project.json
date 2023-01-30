@@ -3,16 +3,16 @@
     "projectTitle": "Blog + Portfolio",
     "link": "https://shuklaabhishek.com",
     "image": "https://res.cloudinary.com/dw6ehse4v/image/upload/v1667318540/WhatsApp_Image_2022-11-01_at_9.26.16_PM_sq1v0i.jpg",
-    "p1": "Yubter is a platform for people to join the community of their favorite youtube channel. I had an idea and I thought it will be cool and helpful for Youtube users to have a place where they can chat with other like-minded people who follow the same Youtube channel as them and build a stronger community.",
-    "p2": "I took inspiration from other similar platforms like Discord, Slack, etc. which are similar in terms of having a place for people of certain communities and providing them a space to communicate and meet like-minded people of the same community.",
+    "p1": "This is my personal blogging and portfolio site which i have created to share my work and learnings in my frontend development journey. By building this project i learned how to send emails and verify for newsletter subscription. Also, my TailwindCSS styling skills got really improved by building this.",
+    "p2": "For Designing, i took inspiration from other similar sites and user interface designs at dribbble.com",
     "tools": ["ReactJs", "Tailwind CSS", "NodeJs", "ExpressJs", "MongoDB"]
   },
   {
     "projectTitle": "Talk-a-Tive",
-    "link": "https://talk-a-tive.netlify.app",
+    "link": "https://talk101.vercel.app",
     "image": "https://res.cloudinary.com/dw6ehse4v/image/upload/v1667982126/talk_jukagx.png",
-    "p1": "Talk-a-Tive is a platform for people to join the community of their favorite youtube channel. I had an idea and I thought it will be cool and helpful for Youtube users to have a place where they can chat with other like-minded people who follow the same Youtube channel as them and build a stronger community.",
-    "p2": "I took inspiration from other similar platforms like Discord, Slack, etc. which are similar in terms of having a place for people of certain communities and providing them a space to communicate and meet like-minded people of the same community.",
+    "p1": "Talk-a-Tive is a live chat web application which allows you to chat and send media files in realtime with other users of the application. By building this project, I learned how websockets work and how client and server can communicate in realtime.",
+    "p2": "I took inspiration from other similar platforms like Whatsapp, Telegram, etc. which are similar in terms of providing users a space to communicate and share images, videos and documents.",
     "tools": [
       "ReactJs",
       "Chakra UI",

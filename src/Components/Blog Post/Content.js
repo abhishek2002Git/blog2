@@ -27,7 +27,7 @@ const Content = () => {
       <div className="date-author flex justify-between border-y-[1px] border-black w-[88%] text-[12px] font-[600] py-2 text-center">
         <span className="date">{blogPostData.date}</span>
         <span className="hover:text-red-600">
-          <a href="#">{blogPostData.author}</a>
+          <a href="https://shuklaabhishek.com/contact">{blogPostData.author}</a>
         </span>
         <span className="duration">{blogPostData.duration} read</span>
       </div>

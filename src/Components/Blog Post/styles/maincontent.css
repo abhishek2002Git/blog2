@@ -33,3 +33,18 @@
   text-align: center;
   padding: 0px 20px;
 }
+
+.code-block {
+  max-height: 300px;
+  padding: 0.5rem 2rem;
+  background: #f5f6f9;
+  overflow: auto;
+  font-size:clamp(13px, 1.21vw, 18px);
+  white-space: nowrap;
+  margin: 15px 0px;
+
+}
+
+.code-block .comment {
+  color: rgb(29, 175, 29);
+}

@@ -53,7 +53,7 @@ const Home = () => {
           </div>
           <div
             onClick={() => {
-              window.open("https://blog203.vercel.app/blog", "_blank");
+              window.open("https://shuklaabhishek.com/blog", "_blank");
             }}
             className="text-[30px]"
           >
@@ -100,21 +100,7 @@ const Home = () => {
               section.
             </p>
             <p className="text-[#666666] text-[16px] md:text-[17px] mb-[0.7rem] md:mb-[1rem] leading-[1.7] w-[95%]">
-              I also like sharing content related to the stuff that I have
-              learned over the years in <b>Web Development</b> so it can help
-              other people of the Dev Community. Feel free to Connect or Follow
-              me on my{" "}
-              <a
-                className="text-[#E53539]"
-                target="_blank"
-                href="https://www.linkedin.com/in/abishekashukla/"
-              >
-                <b>
-                  <u>Linkedin</u>
-                </b>
-              </a>{" "}
-              where I post useful content related to Web Development and
-              Programming
+              Although i am familiar with <b>backend</b> programming <b>(NodeJs)</b> but i am more focused towards <b>frontend</b> development. I'm always striving to improve user experience and stay up-to-date with the latest web technologies.
             </p>
             <p className="text-[#666666] text-[16px] md:text-[17px] mb-[0.7rem] md:mb-[1rem] leading-[1.7] w-[95%]">
               I'm open to <b>Job</b> opportunities where I can contribute, learn
@@ -170,6 +156,15 @@ const Home = () => {
               </button>
               <button className="skill-box text-[14px] md:text-[16px] text-[#666666] bg-[#99999933]  font-[600]  rounded-[5px] py-[0.5em] px-[1.5em] mr-[1rem] mb-[1.5rem]">
                 NodeJs Basics
+              </button>
+              <button className="skill-box text-[14px] md:text-[16px] text-[#666666] bg-[#99999933]  font-[600]  rounded-[5px] py-[0.5em] px-[1.5em] mr-[1rem] mb-[1.5rem]">
+                MongoDB
+              </button>
+              <button className="skill-box text-[14px] md:text-[16px] text-[#666666] bg-[#99999933]  font-[600]  rounded-[5px] py-[0.5em] px-[1.5em] mr-[1rem] mb-[1.5rem]">
+                Socket.io (Websockets)
+              </button>
+              <button className="skill-box text-[14px] md:text-[16px] text-[#666666] bg-[#99999933]  font-[600]  rounded-[5px] py-[0.5em] px-[1.5em] mr-[1rem] mb-[1.5rem]">
+                C++
               </button>
             </div>
           </div>
@@ -230,9 +225,7 @@ const Home = () => {
           <div className="w-[100%] md:w-[45%] flex flex-col justify-center md:items-start items-center md:pl-10">
             <h2 className="text-[26px] font-[700] mb-[1rem]">Talk-A-Tive</h2>
             <p className="text-[16px] md:text-[17px] text-[#666666] mb-[2rem] leading-[1.7] max-w-[30rem] px-3">
-              I re-created the frontend of Boreal Coffee's official web app
-              because I got attracted to their beautiful UI. It was a great
-              experience for me to build the entire frontend.
+            Talk-a-Tive is a live chat web application which allows you to chat and send media files in realtime with other users of the application.
             </p>
             <button
               onClick={() => {

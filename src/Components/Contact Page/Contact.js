@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import contactImage from "../../images/contact-img.jpg"
+import contactImage from "../../images/contactImg.jpg"
 import "./contact.css";
 
 const Contact = () => {
@@ -31,16 +31,16 @@ const Contact = () => {
 
           <div className="author-texts flex">
             <p className="">Mail me at</p>
-            <a href="mailto:abhishe2002shukla007@gmail.com">
+            <a href="mailto:dev@shuklaabhishek.com">
             <p className="text-[#E53935] underline ml-1">
-                abhishe2002shukla007@gmail.com
+                dev@shuklaabhishek.com
               </p>
             </a>
           </div>
           
           <div className="author-texts flex">
             <p className="">Message me on Twitter:</p>
-            <a href="https://twitter.com/messages/compose?recipient_id=abhishukla203">
+            <a href="https://twitter.com/messages/compose?recipient_id=abishekashukla">
             <p className="text-[#E53935] underline ml-1">
                 @abishekAshukla
               </p>

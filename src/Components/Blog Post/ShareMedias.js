@@ -31,7 +31,7 @@ const ShareMedias = () => {
           href={`https://${
             deviceMobile == true ? "api" : "web"
           }.whatsapp.com/send?text=${blogPostData.title}%0a${
-            "http://localhost:3000/blog/" + blogPostData.postid
+            "https://shuklaabhishek.com/blog/" + blogPostData.postid
           }`}
           data-action="share/whatsapp/share"
           target="_blank"
@@ -46,7 +46,7 @@ const ShareMedias = () => {
         <a
           href={`https://twitter.com/intent/tweet?text=${
             blogPostData.title
-          }&url=${"http://localhost:3000/blog/" + blogPostData.postid}`}
+          }&url=${"https://shuklaabhishek.com/blog/" + blogPostData.postid}`}
           data-action="share/whatsapp/share"
           target="_blank"
           rel="noreferrer"
@@ -58,7 +58,7 @@ const ShareMedias = () => {
           </span>
         </a>
         <a
-          href={`https://www.facebook.com/sharer/sharer.php?u=${"http://localhost:3000/blog/"+blogPostData.postid}`}
+          href={`https://www.facebook.com/sharer/sharer.php?u=${"https://shuklaabhishek.com/blog/"+blogPostData.postid}`}
           data-action="share/whatsapp/share"
           target="_blank"
           rel="noreferrer"
@@ -70,7 +70,7 @@ const ShareMedias = () => {
           </span>
         </a>
         <a
-          href={`https://mail.google.com/mail/u/0/?fs=1&tf=cm&to&su=${blogPostData.title}&body=%27+${"http://localhost:3000/blog/"+blogPostData.postid}+%27&ui=2`}
+          href={`https://mail.google.com/mail/u/0/?fs=1&tf=cm&to&su=${blogPostData.title}&body=%27+${"https://shuklaabhishek.com/blog/"+blogPostData.postid}+%27&ui=2`}
           data-action="share/whatsapp/share"
           target="_blank"
           rel="noreferrer"

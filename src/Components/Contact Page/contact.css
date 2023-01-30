@@ -11,8 +11,8 @@
 }
 
 .author-img {
-  width: max(200px, 20vw);
-  height: max(190px, 32vw);
+  width: max(200px, 25vw);
+  height: max(200px, 25vw);
 }
 
 .right-side-author {

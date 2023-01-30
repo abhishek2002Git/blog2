@@ -40,12 +40,12 @@ const Trending = () => {
       <ul className="flex items-center flex-col mt-5 w-[100%]">
         <li className="w-[80%] border-black border-b-2">
           <h2 className="text-[15px] font-[600] my-3">
-            Google Adsense Account Approval Process 2022
+            facebook Adsense Account Approval Process 2022
           </h2>
         </li>
         <li className="w-[80%] border-black border-b-2">
           <h2 className="text-[15px] font-[600] my-3">
-            Google Adsense Account Approval Process 2022
+            hello Adsense Account Approval Process 2022
           </h2>
         </li>
         <li className="w-[80%] border-black border-b-2">
