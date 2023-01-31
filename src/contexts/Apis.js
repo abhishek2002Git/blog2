@@ -13,8 +13,9 @@ const APIProvider = ({ children }) => {
     const response = await fetch(api_url);
     const data = await response.json();
     setBlogPostData(data);
+    alert("The content on this page is not written by me, i am using it only for the project showcase");
   };
-
+  
   // verifying user by sending verification link through email
   const [recipEmailState, setRecipEmailState] = useState("");
   const [otpToVerify, setOtpToVerify] = useState(1234);

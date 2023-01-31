@@ -5,7 +5,8 @@
     "image": "https://res.cloudinary.com/dw6ehse4v/image/upload/v1667318540/WhatsApp_Image_2022-11-01_at_9.26.16_PM_sq1v0i.jpg",
     "p1": "This is my personal blogging and portfolio site which i have created to share my work and learnings in my frontend development journey. By building this project i learned how to send emails and verify for newsletter subscription. Also, my TailwindCSS styling skills got really improved by building this.",
     "p2": "For Designing, i took inspiration from other similar sites and user interface designs at dribbble.com",
-    "tools": ["ReactJs", "Tailwind CSS", "NodeJs", "ExpressJs", "MongoDB"]
+    "tools": ["ReactJs", "Tailwind CSS", "NodeJs", "ExpressJs", "MongoDB"],
+    "github": "https://github.com/abishekashukla/blog2"
   },
   {
     "projectTitle": "Talk-a-Tive",
@@ -21,6 +22,7 @@
       "NodeJs",
       "ExpressJs",
       "MongoDB"
-    ]
+    ],
+    "github": "https://github.com/abishekashukla/talk-a-tive"
   }
 ]

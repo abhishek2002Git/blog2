@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./project.css";
-import data from "../../Data/project.json"
+import data from "../../Data/project.json";
 
 const Project = () => {
   let { id } = useParams();
@@ -20,9 +20,12 @@ const Project = () => {
           the official product.
         </p>
         <a href={data[id - 1].link}>
-          <button className="project-btn w-[240px] h-[55px] bg-[#E53935] rounded-[5px] text-[white] font-[700] mt-[40px]">
+          <button className="project-btn w-[240px] h-[55px] block bg-[#E53935] rounded-[5px] text-[white] font-[700] mt-[40px]">
             LIVE LINK
           </button>
+          <a href={data[id - 1].github}>
+            <button className="project-btn w-[240px] h-[55px] bg-[#E53935] rounded-[5px] text-[white] font-[700] mt-[40px]">GITHUB REPO</button>
+          </a>
         </a>
       </div>
 

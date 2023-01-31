@@ -14,6 +14,7 @@ const Content = () => {
 
   return (
     <div className="content-section bg-white w-[57%] mt-[25px] flex flex-col items-center">
+      {/* <h1>The content below is not written by me, i am using it only for my project</h1> */}
       <div>
         <ContentHeader />
       </div>
