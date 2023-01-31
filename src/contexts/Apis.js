@@ -9,7 +9,7 @@ const APIProvider = ({ children }) => {
   const [blogPostData, setBlogPostData] = useState([]);
   const getBlog = async (pid) => {
     setBlogPostData([]); // to show loader
-    const api_url = `${host}/api/blogs/blog/${pid}`;
+    const api_url = `https://backendapis.vercel.app/api/blogs/blog/${pid}`;
     const response = await fetch(api_url);
     const data = await response.json();
     setBlogPostData(data);
