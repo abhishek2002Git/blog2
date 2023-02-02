@@ -4,7 +4,7 @@ const Resume = () => {
   return (
     <div style={{height:"100vh"}}>
       <object
-        data="https://res.cloudinary.com/dw6ehse4v/image/upload/v1669635732/Abhishek-Shukla-Frontend-Web-Developer_vvovcj.pdf"
+        data="https://res.cloudinary.com/dw6ehse4v/image/upload/v1675328740/abhishek_shukla_resume_ljmafp.pdf"
         type="application/pdf"
         width="100%"
         height="100%"

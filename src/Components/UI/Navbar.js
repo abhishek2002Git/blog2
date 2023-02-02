@@ -78,6 +78,15 @@ const Navbar = () => {
           </li>
           <li
             onClick={() => {
+              navigate("/resume");
+              window.scrollTo(0, 0);
+            }}
+            className="nav-li"
+          >
+            <a className="nav-a">RESUME</a>
+          </li>
+          <li
+            onClick={() => {
               navigate("/blog");
               window.scrollTo(0, 0);
             }}

@@ -62,6 +62,16 @@ const Sidebar2 = () => {
             </li>
             <li
               onClick={() => {
+                navigate("/resume");
+                window.scrollTo(0, 0);
+                showSidebar();
+              }}
+              className="side-li"
+            >
+              RESUME
+            </li>
+            <li
+              onClick={() => {
                 navigate("/blog");
                 window.scrollTo(0, 0);
                 showSidebar();
