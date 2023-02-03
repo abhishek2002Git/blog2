@@ -14,6 +14,7 @@ import TopButton from "./Components/UI/TopButton";
 import Project from "./Components/Project Page/Project"
 import Resume from "./Components/Resume/Resume";
 import { AppState } from "./contexts/Context";
+import Suyash from "./Components/Suyash";
 import "./App.css";
 
 function App() {
@@ -33,12 +34,13 @@ function App() {
   return (
     <div className={sidebar === true ? "" : ""}>
       <Router>
-        <Navbar />
+        {/* <Navbar /> */}
         <Toast />
         <Modal />
         <Sidebar2 />
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          {/* <Route exact path="/" element={<Home />} /> */}
+          <Route exact path="/" element={<Suyash />} />
           <Route exact path="/blog" element={<Blog />} />
           <Route exact path="/blog/:id" element={<Post />} />
           <Route exact path="/verify" element={<Verify />} />
@@ -47,7 +49,7 @@ function App() {
           <Route exact path="/resume" element={<Resume />} />
         </Routes>
         <TopButton />
-        <Footer />
+        {/* <Footer /> */}
       </Router>
     </div>
   );
