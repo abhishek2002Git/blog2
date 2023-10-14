@@ -1,48 +1,48 @@
-import React, { useState } from "react";
-import { AppState } from "../../contexts/Context";
-import "./CSS/footer.css"
-import { APIState } from "../../contexts/Apis";
-import { useNavigate, useLocation } from "react-router-dom";
-import { FaTwitter, FaGithub, FaLinkedinIn } from "react-icons/fa";
+import React, { useState } from 'react'
+import { AppState } from '../../contexts/Context'
+import './CSS/footer.css'
+import { APIState } from '../../contexts/Apis'
+import { useNavigate, useLocation } from 'react-router-dom'
+import { FaTwitter, FaGithub, FaLinkedinIn } from 'react-icons/fa'
 
 const Footer = () => {
-  const { setSidebar, sidebar, showToastFunction, setShowModal } = AppState();
-  const { sendOtpMail } = APIState();
-  const [subsEmailAddress, setSubsEmailAddress] = useState("");
+  const { setSidebar, sidebar, showToastFunction, setShowModal } = AppState()
+  const { sendOtpMail } = APIState()
+  const [subsEmailAddress, setSubsEmailAddress] = useState('')
   const changeSubsEmailAdd = (e) => {
-    setSubsEmailAddress(e.target.value);
-  };
-  let navigate = useNavigate();
-  let location = useLocation();
+    setSubsEmailAddress(e.target.value)
+  }
+  let navigate = useNavigate()
+  let location = useLocation()
   const sendOTPonEmail = () => {
     const mailRegex =
-      /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+      /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
 
     if (subsEmailAddress.match(mailRegex)) {
-      sendOtpMail(subsEmailAddress);
-      showToastFunction("success", "An email is sent to your email address");
-      navigate("/verify");
-      setShowModal(false);
-      window.scrollTo(0, 0);
+      sendOtpMail(subsEmailAddress)
+      showToastFunction('success', 'An email is sent to your email address')
+      navigate('/verify')
+      setShowModal(false)
+      window.scrollTo(0, 0)
     } else {
-      showToastFunction("warning", "Enter a valid email address");
+      showToastFunction('warning', 'Enter a valid email address')
     }
-  };
+  }
 
   return (
     <div
-      className={sidebar === true ? "side-bar-open" : ""}
-      style={{ display: location.pathname == "/verify" ? "none" : "" }} // dont show footer on 'Verify' componenet
+      className={sidebar === true ? 'side-bar-open' : ''}
+      style={{ display: location.pathname == '/verify' ? 'none' : '' }} // dont show footer on 'Verify' componenet
       onClick={() => {
-        setSidebar(false);
+        setSidebar(false)
       }}
     >
       <footer className="footer">
         <div className="news-letter">
-          <h2 style={{ color: "#ffffff" }} className="subscribe-text">
+          <h2 style={{ color: '#ffffff' }} className="subscribe-text">
             Subscribe to Blog via Email
           </h2>
-          <p style={{ color: "#ABABAB" }} className="address-text">
+          <p style={{ color: '#ABABAB' }} className="address-text">
             Enter your email address to subscribe to this blog and receive
             notifications of new posts by email.
           </p>
@@ -69,7 +69,7 @@ const Footer = () => {
           <div className="social-boxes">
             <div
               onClick={() => {
-                window.open("https://twitter.com/abishekashukla", "_blank");
+                window.open('https://twitter.com/abishekashukla', '_blank')
               }}
               className="social-box"
             >
@@ -79,7 +79,7 @@ const Footer = () => {
             </div>
             <div
               onClick={() => {
-                window.open("https://github.com/abishekashukla", "_blank");
+                window.open('https://github.com/abishekashukla', '_blank')
               }}
               className="social-box center-icon"
             >
@@ -89,7 +89,7 @@ const Footer = () => {
             </div>
             <div
               onClick={() => {
-                window.open("https://linkedin.com/in/abishekashukla", "_blank");
+                window.open('https://linkedin.com/in/abishekashukla', '_blank')
               }}
               className="social-box"
             >
@@ -148,10 +148,10 @@ const Footer = () => {
         </div> */}
       </footer>
       <div className="footer-below">
-        Copyright © 2022 Abhishek Shukla | Created by Abhishek Shukla
+        Copyright © 2023 Abhishek Shukla | Created by Abhishek Shukla
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

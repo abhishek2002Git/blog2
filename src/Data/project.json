@@ -24,5 +24,22 @@
       "MongoDB"
     ],
     "github": "https://github.com/abishekashukla/talk-a-tive"
+  },
+  {
+    "projectTitle": "Coverly",
+    "link": "https://coverly-web.vercel.app",
+    "image": "https://res.cloudinary.com/dw6ehse4v/image/upload/v1697299123/Screenshot_60_rnnzs1.png",
+    "p1": "Coverly is a web-based ecommerce platform that allows users to shop for their favorite mobile phone back covers for their smartphones. This project is built on Next.js, a React.js framework. It's my first Next.js based project, and I've learned both basics and some advanced concepts of Next.js while building it.",
+    "p2": "Key Features: Payment integration, Authentication and Authorization, Infinite scrolling, pagination, Search functionality with token cancellation, Static site generation for optimal performance",
+    "tools": [
+      "NextJs",
+      "NodeJs",
+      "ExpressJs",
+      "MongoDB",
+      "Tailwind CSS",
+      "Razorpay",
+      "Vercel"
+    ],
+    "github": "https://github.com/abishekashukla/coverly"
   }
 ]

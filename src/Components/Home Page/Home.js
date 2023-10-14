@@ -1,16 +1,16 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import {
   FaTwitter,
   FaInstagram,
   FaLinkedin,
   FaGithub,
   FaBookOpen,
-} from "react-icons/fa";
-import "./home.css";
+} from 'react-icons/fa'
+import './home.css'
 
 const Home = () => {
-  let navigate = useNavigate();
+  let navigate = useNavigate()
   return (
     <div className="mt-[40px]">
       <div className="intro-home h-[110vh] max-h-[38rem] text-center flex flex-col justify-center items-center">
@@ -19,9 +19,9 @@ const Home = () => {
           <div
             onClick={() => {
               window.open(
-                "https://www.linkedin.com/in/abishekashukla",
-                "_blank"
-              );
+                'https://www.linkedin.com/in/abishekashukla',
+                '_blank'
+              )
             }}
             className="text-[30px]"
           >
@@ -29,7 +29,7 @@ const Home = () => {
           </div>
           <div
             onClick={() => {
-              window.open("https://twitter.com/abishekashukla", "_blank");
+              window.open('https://twitter.com/abishekashukla', '_blank')
             }}
             className="text-[30px]"
           >
@@ -37,7 +37,7 @@ const Home = () => {
           </div>
           <div
             onClick={() => {
-              window.open("https://www.instagram.com/abishekashukla", "_blank");
+              window.open('https://www.instagram.com/abishekashukla', '_blank')
             }}
             className="text-[30px]"
           >
@@ -45,7 +45,7 @@ const Home = () => {
           </div>
           <div
             onClick={() => {
-              window.open("https://github.com/abishekashukla", "_blank");
+              window.open('https://github.com/abishekashukla', '_blank')
             }}
             className="text-[30px]"
           >
@@ -53,7 +53,7 @@ const Home = () => {
           </div>
           <div
             onClick={() => {
-              window.open("https://shuklaabhishek.com/blog", "_blank");
+              window.open('https://shuklaabhishek.com/blog', '_blank')
             }}
             className="text-[30px]"
           >
@@ -96,11 +96,14 @@ const Home = () => {
             <p className="text-[#666666] text-[16px] md:text-[17px] mb-[0.7rem] md:mb-[1rem] leading-[1.7] w-[95%]">
               I'm a <b>Frontend Web Developer</b> building the Front-end of
               Websites and Web Applications that leads to the success of the
-              overall product. Check out some of my work in the <b>Projects</b>{" "}
+              overall product. Check out some of my work in the <b>Projects</b>{' '}
               section.
             </p>
             <p className="text-[#666666] text-[16px] md:text-[17px] mb-[0.7rem] md:mb-[1rem] leading-[1.7] w-[95%]">
-              Although i am familiar with <b>backend</b> programming <b>(NodeJs)</b> but i am more focused towards <b>frontend</b> development. I'm always striving to improve user experience and stay up-to-date with the latest web technologies.
+              Although i am familiar with <b>backend</b> programming{' '}
+              <b>(NodeJs)</b> but i am more focused towards <b>frontend</b>{' '}
+              development. I'm always striving to improve user experience and
+              stay up-to-date with the latest web technologies.
             </p>
             <p className="text-[#666666] text-[16px] md:text-[17px] mb-[0.7rem] md:mb-[1rem] leading-[1.7] w-[95%]">
               I'm open to <b>Job</b> opportunities where I can contribute, learn
@@ -111,8 +114,8 @@ const Home = () => {
             {/* <button className="project-btn w-[173px] h-[55px] bg-[#E53935] rounded-[5px] text-[white] font-[700] mt-[25px] text-[16px]"> */}
             <button
               onClick={() => {
-                navigate("/contact");
-                window.scrollTo(0, 0);
+                navigate('/contact')
+                window.scrollTo(0, 0)
               }}
               className="project-btn w-[155px] md:w-[173px] h-[48px] md:h-[55px] bg-[#E53935] rounded-[5px] text-[white] font-[700] mt-[25px] text-[14px] md:text-[16px]"
             >
@@ -134,6 +137,9 @@ const Home = () => {
                 JavaScript
               </button>
               <button className="skill-box text-[14px] md:text-[16px] text-[#666666] bg-[#99999933]  font-[600]  rounded-[5px] py-[0.5em] px-[1.5em] mr-[1rem] mb-[1.5rem]">
+                NextJs
+              </button>
+              <button className="skill-box text-[14px] md:text-[16px] text-[#666666] bg-[#99999933]  font-[600]  rounded-[5px] py-[0.5em] px-[1.5em] mr-[1rem] mb-[1.5rem]">
                 ReactJs
               </button>
               <button className="skill-box text-[14px] md:text-[16px] text-[#666666] bg-[#99999933]  font-[600]  rounded-[5px] py-[0.5em] px-[1.5em] mr-[1rem] mb-[1.5rem]">
@@ -152,13 +158,13 @@ const Home = () => {
                 NodeJs Basics
               </button>
               <button className="skill-box text-[14px] md:text-[16px] text-[#666666] bg-[#99999933]  font-[600]  rounded-[5px] py-[0.5em] px-[1.5em] mr-[1rem] mb-[1.5rem]">
-                MongoDB
-              </button>
-              <button className="skill-box text-[14px] md:text-[16px] text-[#666666] bg-[#99999933]  font-[600]  rounded-[5px] py-[0.5em] px-[1.5em] mr-[1rem] mb-[1.5rem]">
                 Socket.io (Websockets)
               </button>
               <button className="skill-box text-[14px] md:text-[16px] text-[#666666] bg-[#99999933]  font-[600]  rounded-[5px] py-[0.5em] px-[1.5em] mr-[1rem] mb-[1.5rem]">
                 C++
+              </button>
+              <button className="skill-box text-[14px] md:text-[16px] text-[#666666] bg-[#99999933]  font-[600]  rounded-[5px] py-[0.5em] px-[1.5em] mr-[1rem] mb-[1.5rem]">
+                MongoDB
               </button>
             </div>
           </div>
@@ -183,6 +189,34 @@ const Home = () => {
           <div className="md:w-[55%] w-[100%] flex md:justify-end justify-center">
             <img
               className="w-[90%]"
+              src="https://res.cloudinary.com/dw6ehse4v/image/upload/v1697300729/coverly-thumbnail_s1l0ky.png"
+              alt=""
+            />
+          </div>
+          <div className="w-[100%] md:w-[45%] flex flex-col justify-center md:items-start items-center md:pl-10">
+            <h2 className="text-[26px] font-[700] mb-[1rem]">Coverly</h2>
+            <p className="text-[16px] md:text-[17px] text-[#666666] mb-[2rem] leading-[1.7] max-w-[30rem] px-3">
+              Coverly is a web-based ecommerce platform that allows users to
+              shop for their favorite mobile phone back covers for their
+              smartphones. This project is built on Next.js, a React.js
+              framework.
+            </p>
+            <button
+              onClick={() => {
+                navigate('/project/3')
+                window.scrollTo(0, 0)
+              }}
+              className="project-btn text-[13px] md:text-[15px] text-[#ffffff] bg-[#E53539] tracking-[1px] font-[700] rounded-[5px] py-[1em] px-[3.3em]"
+            >
+              CASE STUDY
+            </button>
+          </div>
+        </div>
+
+        <div className="project flex md:flex-row flex-col pt-[65px] md:pt-[90px]">
+          <div className="md:w-[55%] w-[100%] flex md:justify-end justify-center">
+            <img
+              className="w-[90%]"
               src="https://res.cloudinary.com/dw6ehse4v/image/upload/v1667318540/WhatsApp_Image_2022-11-01_at_9.26.16_PM_sq1v0i.jpg"
               alt=""
             />
@@ -198,8 +232,8 @@ const Home = () => {
             </p>
             <button
               onClick={() => {
-                navigate("/project/1");
-                window.scrollTo(0, 0);
+                navigate('/project/1')
+                window.scrollTo(0, 0)
               }}
               className="project-btn text-[13px] md:text-[15px] text-[#ffffff] bg-[#E53539] tracking-[1px] font-[700] rounded-[5px] py-[1em] px-[3.3em]"
             >
@@ -219,12 +253,14 @@ const Home = () => {
           <div className="w-[100%] md:w-[45%] flex flex-col justify-center md:items-start items-center md:pl-10">
             <h2 className="text-[26px] font-[700] mb-[1rem]">Talk-A-Tive</h2>
             <p className="text-[16px] md:text-[17px] text-[#666666] mb-[2rem] leading-[1.7] max-w-[30rem] px-3">
-            Talk-a-Tive is a live chat web application which allows you to chat and send media files in realtime with other users of the application.
+              Talk-a-Tive is a live chat web application which allows you to
+              chat and send media files in realtime with other users of the
+              application.
             </p>
             <button
               onClick={() => {
-                navigate("/project/2");
-                window.scrollTo(0, 0);
+                navigate('/project/2')
+                window.scrollTo(0, 0)
               }}
               className="project-btn text-[13px] md:text-[15px] text-[#ffffff] bg-[#E53539] tracking-[1px] font-[700] rounded-[5px] py-[1em] px-[3.3em]"
             >
@@ -234,7 +270,7 @@ const Home = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
