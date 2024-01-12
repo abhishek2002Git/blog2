@@ -1,10 +1,6 @@
-import React from "react";
-import {
-  FaTwitter,
-  FaInstagram,
-  FaLinkedinIn,
-} from "react-icons/fa";
-import "./styles/social.css";
+import React from 'react'
+import { FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
+import './styles/social.css'
 
 const Social = () => {
   return (
@@ -14,16 +10,24 @@ const Social = () => {
       </h2>
       <div className="slides w-[100%]">
         <ul className="flex items-center flex-col mt-5 w-[100%]">
-            <li onClick={()=>{window.location="https://twitter.com/abhiShukla203"}} className="w-[80%] border-black border-b-2 flex py-3 text-red-600 hover:cursor-pointer">
-              <div className="text-[23px]">
-                <FaTwitter />
-              </div>
-              <h2 className="text-[17px] font-[600] ml-5 text-black">
-                Twitter
-              </h2>
-            </li>
+          <li
+            onClick={() => {
+              window.location = 'https://twitter.com/abishekAshukla'
+            }}
+            className="w-[80%] border-black border-b-2 flex py-3 text-red-600 hover:cursor-pointer"
+          >
+            <div className="text-[23px]">
+              <FaTwitter />
+            </div>
+            <h2 className="text-[17px] font-[600] ml-5 text-black">Twitter</h2>
+          </li>
 
-          <li onClick={()=>{window.location="https://www.instagram.com/theabhishekshukla2002"}} className="w-[80%] border-black border-b-2 flex py-3 text-red-600 hover:cursor-pointer">
+          <li
+            onClick={() => {
+              window.location = 'https://www.instagram.com/abishekashukla'
+            }}
+            className="w-[80%] border-black border-b-2 flex py-3 text-red-600 hover:cursor-pointer"
+          >
             <div className="text-[23px]">
               <FaInstagram />
             </div>
@@ -31,7 +35,12 @@ const Social = () => {
               Instagram
             </h2>
           </li>
-          <li onClick={()=>{window.location="https://www.linkedin.com/in/abhi203"}} className="w-[80%] border-black border-b-2 flex py-3 text-red-600 hover:cursor-pointer">
+          <li
+            onClick={() => {
+              window.location = 'https://www.linkedin.com/in/abishekashukla'
+            }}
+            className="w-[80%] border-black border-b-2 flex py-3 text-red-600 hover:cursor-pointer"
+          >
             <div className="text-[23px]">
               <FaLinkedinIn />
             </div>
@@ -40,7 +49,7 @@ const Social = () => {
         </ul>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Social;
+export default Social
